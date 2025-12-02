@@ -1,0 +1,118 @@
+TradeMaster® Enterprise Edition - Software License Agreement
+
+Copyright © 2025 Sangam Baral. All Rights Reserved.
+Patent Pending
+
+IMPORTANT - READ CAREFULLY: This End-User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity, "Licensee") and Sangam Baral ("Licensor") for the TradeMaster® software product, which includes computer software and may include associated media, printed materials, and online or electronic documentation ("Software").
+
+BY INSTALLING, COPYING, OR OTHERWISE USING THE SOFTWARE, YOU AGREE TO BE BOUND BY THE TERMS OF THIS EULA. IF YOU DO NOT AGREE TO THE TERMS OF THIS EULA, DO NOT INSTALL OR USE THE SOFTWARE.
+
+---
+
+1. GRANT OF LICENSE
+
+Subject to the terms and conditions of this EULA, Licensor grants Licensee a non-exclusive, non-transferable license to:
+
+a) Install and use the Software on the number of computers specified in your license tier:
+   - STARTER LICENSE: One (1) computer
+   - BUSINESS LICENSE: Up to five (5) computers
+   - ENTERPRISE LICENSE: Unlimited computers within your organization
+
+b) Make one (1) backup copy of the Software for archival purposes
+
+c) Use the Software for commercial purposes within your organization
+
+2. RESTRICTIONS
+
+Licensee shall NOT:
+
+a) Reverse engineer, decompile, disassemble, or attempt to derive the source code of the Software
+b) Modify, adapt, translate, or create derivative works based on the Software
+c) Remove, obscure, or alter any copyright, trademark, or other proprietary rights notices
+d) Rent, lease, lend, sell, redistribute, or sublicense the Software
+e) Use the Software to provide services to third parties (SaaS model)
+f) Transfer the license without prior written consent from Licensor
+
+3. INTELLECTUAL PROPERTY RIGHTS
+
+a) The Software is protected by copyright laws, international copyright treaties, and patent laws
+b) Patent-pending technology is incorporated into the Software
+c) All title and intellectual property rights remain with Sangam Baral
+d) "TradeMaster" is a trademark of Sangam Baral (registration pending)
+
+4. TERM AND TERMINATION
+
+a) This license is perpetual unless terminated
+b) Licensor may terminate this EULA if Licensee breaches any terms
+c) Upon termination, Licensee must destroy all copies of the Software
+d) Sections 2, 3, 6, 7, 8, and 9 survive termination
+
+5. UPDATES AND SUPPORT
+
+a) Starter License: Free updates for one (1) year from purchase date
+b) Business License: Free updates for two (2) years from purchase date
+c) Enterprise License: Free updates for lifetime of the product
+d) Support is provided via email as per license tier
+e) Updates do not constitute a new product or new license
+
+6. WARRANTY DISCLAIMER
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. LICENSOR DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:
+- MERCHANTABILITY
+- FITNESS FOR A PARTICULAR PURPOSE
+- NON-INFRINGEMENT
+- TITLE
+
+LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION WILL BE UNINTERRUPTED OR ERROR-FREE.
+
+7. LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR ANY OTHER PECUNIARY LOSS) ARISING OUT OF THE USE OF OR INABILITY TO USE THIS SOFTWARE, EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+LICENSOR'S TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT PAID BY LICENSEE FOR THE LICENSE.
+
+8. DATA PRIVACY AND SECURITY
+
+a) The Software stores data locally on Licensee's computer
+b) No data is transmitted to Licensor unless explicitly initiated by Licensee (e.g., support requests)
+c) Licensee is solely responsible for backing up their data
+d) Licensor is not responsible for data loss or corruption
+
+9. EXPORT RESTRICTIONS
+
+Licensee agrees to comply with all applicable export laws and regulations. The Software may not be exported or re-exported to countries subject to U.S. export restrictions.
+
+10. GOVERNING LAW
+
+This EULA shall be governed by and construed in accordance with the laws of [Your State/Country], without regard to its conflict of law provisions. Any disputes shall be resolved in the courts of [Your Jurisdiction].
+
+11. ENTIRE AGREEMENT
+
+This EULA constitutes the entire agreement between the parties concerning the Software and supersedes all prior agreements and understandings.
+
+12. AMENDMENTS
+
+Licensor reserves the right to modify this EULA. Licensee will be notified of material changes via email. Continued use of the Software after notification constitutes acceptance of the modified terms.
+
+13. SEVERABILITY
+
+If any provision of this EULA is held to be unenforceable, the remainder shall continue in full force and effect.
+
+14. CONTACT INFORMATION
+
+For questions regarding this EULA:
+
+Sangam Baral
+Email: legal@trademaster.com
+Address: [Your Business Address]
+
+---
+
+ACKNOWLEDGMENT
+
+BY INSTALLING OR USING THE SOFTWARE, YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT, UNDERSTAND IT, AND AGREE TO BE BOUND BY ITS TERMS AND CONDITIONS.
+
+TradeMaster® is a registered trademark of Sangam Baral.
+Patent Pending - Application Filed December 2025
+
+Copyright © 2025 Sangam Baral. All Rights Reserved.
