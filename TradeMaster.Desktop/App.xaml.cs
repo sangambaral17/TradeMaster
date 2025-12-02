@@ -1,0 +1,58 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System.Windows;
+using TradeMaster.Core.Interfaces;
+using TradeMaster.Infrastructure.Data;
+
+namespace TradeMaster.Desktop
+{
+    public partial class App : Application
+    {
+        public static IHost? AppHost { get; private set; }
+
+        public App()
+        {
+            AppHost = Host.CreateDefaultBuilder()
+                .ConfigureServices((hostContext, services) =>
+                {
+                    // Database
+                    services.AddDbContext<TradeMasterDbContext>(options =>
+                    {
+                        options.UseSqlite("Data Source=trademaster.db");
+                    });
+
+                    // Repositories
+                    services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+
+                    // Windows
+                    services.AddSingleton<MainWindow>();
+                })
+                .Build();
+        }
+
+        protected override async void OnStartup(StartupEventArgs e)
+        {
+            await AppHost!.StartAsync();
+
+            // Initialize Database
+            using (var scope = AppHost.Services.CreateScope())
+            {
+                var context = scope.ServiceProvider.GetRequiredService<TradeMasterDbContext>();
+                DbInitializer.Initialize(context);
+            }
+
+            // Show Main Window
+            var startupForm = AppHost.Services.GetRequiredService<MainWindow>();
+            startupForm.Show();
+
+            base.OnStartup(e);
+        }
+
+        protected override async void OnExit(ExitEventArgs e)
+        {
+            await AppHost!.StopAsync();
+            base.OnExit(e);
+        }
+    }
+}
