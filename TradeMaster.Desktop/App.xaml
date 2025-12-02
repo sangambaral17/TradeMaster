@@ -1,8 +1,12 @@
 ﻿<Application x:Class="TradeMaster.Desktop.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:TradeMaster.Desktop">
+             xmlns:local="clr-namespace:TradeMaster.Desktop"
+             xmlns:converters="clr-namespace:TradeMaster.Desktop.Converters">
     <Application.Resources>
-         
+        <!-- Value Converters -->
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisConverter"/>
+        <converters:NullToBoolConverter x:Key="NullToBoolConverter"/>
+        <converters:LowStockConverter x:Key="LowStockConverter"/>
     </Application.Resources>
 </Application>

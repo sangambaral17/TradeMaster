@@ -17,5 +17,8 @@ namespace TradeMaster.Core.Entities
 
         [Column(TypeName = "decimal(18,2)")]
         public decimal UnitPrice { get; set; } // Price at the time of sale
+
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal TotalPrice { get; set; } // UnitPrice * Quantity
     }
 }

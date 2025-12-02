@@ -5,8 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TradeMaster.Desktop"
         mc:Ignorable="d"
-        Title="TradeMaster Enterprise" Height="600" Width="900"
-        WindowStartupLocation="CenterScreen">
+        Title="TradeMaster Enterprise" Height="700" Width="1100"
+        WindowStartupLocation="CenterScreen"
+        Background="#ecf0f1">
+
+    <Window.Resources>
+        <Style x:Key="MenuButton" TargetType="Button">
+            <Setter Property="Background" Value="#3498db"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="20,15"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="8" 
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                            VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#2980b9"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="DashboardCard" TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Padding" Value="25"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="#000000" Opacity="0.1" BlurRadius="15" ShadowDepth="2"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -15,24 +60,238 @@
         </Grid.RowDefinitions>
 
         <!-- Header -->
-        <Border Background="#2c3e50" Padding="20">
-            <TextBlock Text="TradeMaster Enterprise" Foreground="White" FontSize="24" FontWeight="Bold"/>
+        <Border Background="#2c3e50" Padding="30,25">
+            <Grid>
+                <StackPanel>
+                    <TextBlock Text="🏢 TradeMaster Enterprise" 
+                               Foreground="White" 
+                               FontSize="32" 
+                               FontWeight="Bold"/>
+                    <TextBlock Text="Inventory &amp; Sales Management System" 
+                               Foreground="#bdc3c7" 
+                               FontSize="16" 
+                               Margin="0,5,0,0"/>
+                </StackPanel>
+            </Grid>
         </Border>
 
         <!-- Main Content -->
-        <Grid Grid.Row="1" Margin="20">
-            <StackPanel>
-                <TextBlock Text="System Status" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10"/>
-                <TextBlock x:Name="StatusText" Text="Initializing..." FontSize="16"/>
-                
-                <TextBlock Text="Inventory Stats" FontSize="18" FontWeight="SemiBold" Margin="0,20,0,10"/>
-                <TextBlock x:Name="ProductCountText" Text="Loading..." FontSize="16"/>
-            </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="280"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Sidebar Navigation -->
+            <Border Grid.Column="0" Background="#34495e" Padding="20">
+                <StackPanel>
+                    <TextBlock Text="📋 NAVIGATION" 
+                               Foreground="#bdc3c7" 
+                               FontSize="12" 
+                               FontWeight="Bold" 
+                               Margin="0,0,0,15"/>
+
+                    <Button Content="📊 Dashboard" 
+                            Style="{StaticResource MenuButton}"
+                            Background="#95a5a6"
+                            Click="DashboardButton_Click"/>
+
+                    <Button Content="📦 Product Management" 
+                            Style="{StaticResource MenuButton}"
+                            Click="ProductManagementButton_Click"/>
+
+                    <Button Content="💰 Point of Sale" 
+                            Style="{StaticResource MenuButton}"
+                            Click="PosButton_Click"/>
+
+                    <Button Content="📈 Sales Reports" 
+                            Style="{StaticResource MenuButton}"
+                            Background="#95a5a6"
+                            IsEnabled="False"
+                            ToolTip="Coming Soon"/>
+
+                    <Button Content="⚙️ Settings" 
+                            Style="{StaticResource MenuButton}"
+                            Background="#95a5a6"
+                            IsEnabled="False"
+                            ToolTip="Coming Soon"/>
+
+                    <Separator Background="#7f8c8d" Margin="0,20"/>
+
+                    <TextBlock Text="📊 QUICK STATS" 
+                               Foreground="#bdc3c7" 
+                               FontSize="12" 
+                               FontWeight="Bold" 
+                               Margin="0,10,0,15"/>
+
+                    <Border Background="#2c3e50" CornerRadius="8" Padding="15" Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="Total Products" 
+                                       Foreground="#bdc3c7" 
+                                       FontSize="11"/>
+                            <TextBlock x:Name="ProductCountText" 
+                                       Text="Loading..." 
+                                       Foreground="White" 
+                                       FontSize="24" 
+                                       FontWeight="Bold"
+                                       Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="#2c3e50" CornerRadius="8" Padding="15">
+                        <StackPanel>
+                            <TextBlock Text="System Status" 
+                                       Foreground="#bdc3c7" 
+                                       FontSize="11"/>
+                            <TextBlock x:Name="StatusText" 
+                                       Text="✅ Connected" 
+                                       Foreground="#27ae60" 
+                                       FontSize="14" 
+                                       FontWeight="SemiBold"
+                                       Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </Border>
+
+            <!-- Dashboard Content -->
+            <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="30">
+                    <TextBlock Text="Welcome to TradeMaster" 
+                               FontSize="28" 
+                               FontWeight="Bold" 
+                               Foreground="#2c3e50"
+                               Margin="0,0,0,10"/>
+                    <TextBlock Text="Your enterprise inventory and sales management solution" 
+                               FontSize="16" 
+                               Foreground="#7f8c8d"
+                               Margin="0,0,0,30"/>
+
+                    <!-- Feature Cards -->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Product Management Card -->
+                        <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource DashboardCard}">
+                            <StackPanel>
+                                <TextBlock Text="📦" FontSize="48" Margin="0,0,0,10"/>
+                                <TextBlock Text="Product Management" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           Foreground="#2c3e50"
+                                           Margin="0,0,0,10"/>
+                                <TextBlock Text="Manage your inventory, add products, update stock levels, and track categories." 
+                                           FontSize="14" 
+                                           Foreground="#7f8c8d"
+                                           TextWrapping="Wrap"
+                                           Margin="0,0,0,15"/>
+                                <Button Content="Open Module →" 
+                                        Background="#3498db" 
+                                        Foreground="White" 
+                                        Padding="15,10"
+                                        BorderThickness="0"
+                                        FontWeight="SemiBold"
+                                        Cursor="Hand"
+                                        Click="ProductManagementButton_Click"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- POS Card -->
+                        <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource DashboardCard}" Opacity="0.6">
+                            <StackPanel>
+                                <TextBlock Text="💰" FontSize="48" Margin="0,0,0,10"/>
+                                <TextBlock Text="Point of Sale" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           Foreground="#2c3e50"
+                                           Margin="0,0,0,10"/>
+                                <TextBlock Text="Process sales transactions, generate invoices, and manage customer orders." 
+                                           FontSize="14" 
+                                           Foreground="#7f8c8d"
+                                           TextWrapping="Wrap"
+                                           Margin="0,0,0,15"/>
+                                <Button Content="Coming Soon" 
+                                        Background="#95a5a6" 
+                                        Foreground="White" 
+                                        Padding="15,10"
+                                        BorderThickness="0"
+                                        FontWeight="SemiBold"
+                                        IsEnabled="False"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- Sales Reports Card -->
+                        <Border Grid.Row="1" Grid.Column="0" Style="{StaticResource DashboardCard}" Opacity="0.6">
+                            <StackPanel>
+                                <TextBlock Text="📈" FontSize="48" Margin="0,0,0,10"/>
+                                <TextBlock Text="Sales Reports" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           Foreground="#2c3e50"
+                                           Margin="0,0,0,10"/>
+                                <TextBlock Text="View detailed analytics, sales trends, and generate comprehensive reports." 
+                                           FontSize="14" 
+                                           Foreground="#7f8c8d"
+                                           TextWrapping="Wrap"
+                                           Margin="0,0,0,15"/>
+                                <Button Content="Coming Soon" 
+                                        Background="#95a5a6" 
+                                        Foreground="White" 
+                                        Padding="15,10"
+                                        BorderThickness="0"
+                                        FontWeight="SemiBold"
+                                        IsEnabled="False"/>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- Settings Card -->
+                        <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource DashboardCard}" Opacity="0.6">
+                            <StackPanel>
+                                <TextBlock Text="⚙️" FontSize="48" Margin="0,0,0,10"/>
+                                <TextBlock Text="System Settings" 
+                                           FontSize="20" 
+                                           FontWeight="Bold" 
+                                           Foreground="#2c3e50"
+                                           Margin="0,0,0,10"/>
+                                <TextBlock Text="Configure system preferences, user accounts, and application settings." 
+                                           FontSize="14" 
+                                           Foreground="#7f8c8d"
+                                           TextWrapping="Wrap"
+                                           Margin="0,0,0,15"/>
+                                <Button Content="Coming Soon" 
+                                        Background="#95a5a6" 
+                                        Foreground="White" 
+                                        Padding="15,10"
+                                        BorderThickness="0"
+                                        FontWeight="SemiBold"
+                                        IsEnabled="False"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
         </Grid>
 
         <!-- Footer -->
-        <Border Grid.Row="2" Background="#ecf0f1" Padding="10">
-            <TextBlock Text="Ready" Foreground="#7f8c8d"/>
+        <Border Grid.Row="2" Background="#2c3e50" Padding="30,15">
+            <Grid>
+                <TextBlock Text="TradeMaster v0.1.0 Alpha | © 2025" 
+                           Foreground="#bdc3c7" 
+                           FontSize="13"
+                           HorizontalAlignment="Left"/>
+                <TextBlock Text="Ready" 
+                           Foreground="#27ae60" 
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           HorizontalAlignment="Right"/>
+            </Grid>
         </Border>
     </Grid>
 </Window>

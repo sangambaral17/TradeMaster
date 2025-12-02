@@ -4,6 +4,8 @@ using Microsoft.Extensions.Hosting;
 using System.Windows;
 using TradeMaster.Core.Interfaces;
 using TradeMaster.Infrastructure.Data;
+using TradeMaster.Desktop.ViewModels;
+using TradeMaster.Desktop.Views;
 
 namespace TradeMaster.Desktop
 {
@@ -25,8 +27,14 @@ namespace TradeMaster.Desktop
                     // Repositories
                     services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
 
+                    // ViewModels
+                    services.AddTransient<ProductListViewModel>();
+                    services.AddTransient<PosViewModel>();
+
                     // Windows
                     services.AddSingleton<MainWindow>();
+                    services.AddTransient<ProductListView>();
+                    services.AddTransient<PosView>();
                 })
                 .Build();
         }
