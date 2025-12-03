@@ -131,23 +131,50 @@ namespace TradeMaster.Desktop.ViewModels
 
             try
             {
+                // 1. Create the Sale entity
                 var sale = new Sale
                 {
                     SaleDate = DateTime.Now,
                     TotalAmount = TotalAmount,
-                    Items = CartItems.ToList()
+                    // CustomerId will be added later when we integrate customer selection in POS
                 };
 
+                // 2. Create SaleItems and Update Stock
+                foreach (var item in CartItems)
+                {
+                    // Create a clean SaleItem for the database (avoid attaching the full Product object)
+                    var saleItem = new SaleItem
+                    {
+                        ProductId = item.ProductId,
+                        Quantity = item.Quantity,
+                        UnitPrice = item.UnitPrice,
+                        TotalPrice = item.TotalPrice
+                    };
+                    sale.Items.Add(saleItem);
+
+                    // Update Stock
+                    var product = await _productRepository.GetByIdAsync(item.ProductId);
+                    if (product != null)
+                    {
+                        product.StockQuantity -= item.Quantity;
+                        await _productRepository.UpdateAsync(product);
+                    }
+                }
+
+                // 3. Save the Sale
                 await _saleRepository.AddAsync(sale);
 
                 MessageBox.Show($"Transaction Completed!\nTotal: {TotalAmount:C2}", 
                     "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 ClearCart();
+                
+                // Refresh products to show updated stock
+                await LoadProducts();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error processing transaction.", 
+                MessageBox.Show($"Error processing transaction: {ex.Message}\n\n{ex.InnerException?.Message}", 
                     "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }

@@ -80,5 +80,11 @@ namespace TradeMaster.Desktop
             var customerListView = _serviceProvider.GetRequiredService<CustomerListView>();
             customerListView.ShowDialog();
         }
+
+        private void SalesReportsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var salesHistoryView = _serviceProvider.GetRequiredService<SalesHistoryView>();
+            salesHistoryView.ShowDialog();
+        }
     }
 }

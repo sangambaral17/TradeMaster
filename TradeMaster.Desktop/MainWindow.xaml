@@ -110,9 +110,7 @@
 
                     <Button Content="📈 Sales Reports" 
                             Style="{StaticResource MenuButton}"
-                            Background="#95a5a6"
-                            IsEnabled="False"
-                            ToolTip="Coming Soon"/>
+                            Click="SalesReportsButton_Click"/>
 
                     <Button Content="⚙️ Settings" 
                             Style="{StaticResource MenuButton}"

@@ -26,17 +26,20 @@ namespace TradeMaster.Desktop
 
                     // Repositories
                     services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+                    services.AddScoped<ISaleRepository, SaleRepository>();
 
                     // ViewModels
                     services.AddTransient<ProductListViewModel>();
                     services.AddTransient<PosViewModel>();
                     services.AddTransient<CustomerListViewModel>();
+                    services.AddTransient<SalesHistoryViewModel>();
 
                     // Windows
                     services.AddSingleton<MainWindow>();
                     services.AddTransient<ProductListView>();
                     services.AddTransient<PosView>();
                     services.AddTransient<CustomerListView>();
+                    services.AddTransient<SalesHistoryView>();
                 })
                 .Build();
         }
