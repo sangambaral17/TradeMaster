@@ -9,6 +9,7 @@ namespace TradeMaster.Infrastructure.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Sale> Sales { get; set; }
         public DbSet<SaleItem> SaleItems { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         // Constructor for Dependency Injection
         public TradeMasterDbContext(DbContextOptions<TradeMasterDbContext> options) : base(options)

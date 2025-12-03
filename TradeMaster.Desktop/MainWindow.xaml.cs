@@ -74,5 +74,11 @@ namespace TradeMaster.Desktop
                 // Ignore errors during refresh
             }
         }
+
+        private void CustomerManagementButton_Click(object sender, RoutedEventArgs e)
+        {
+            var customerListView = _serviceProvider.GetRequiredService<CustomerListView>();
+            customerListView.ShowDialog();
+        }
     }
 }

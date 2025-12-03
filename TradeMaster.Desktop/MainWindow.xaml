@@ -104,6 +104,10 @@
                             Style="{StaticResource MenuButton}"
                             Click="PosButton_Click"/>
 
+                    <Button Content="👥 Customer Management" 
+                            Style="{StaticResource MenuButton}"
+                            Click="CustomerManagementButton_Click"/>
+
                     <Button Content="📈 Sales Reports" 
                             Style="{StaticResource MenuButton}"
                             Background="#95a5a6"
@@ -204,7 +208,7 @@
                         </Border>
 
                         <!-- POS Card -->
-                        <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource DashboardCard}" Opacity="0.6">
+                        <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource DashboardCard}">
                             <StackPanel>
                                 <TextBlock Text="💰" FontSize="48" Margin="0,0,0,10"/>
                                 <TextBlock Text="Point of Sale" 
@@ -217,13 +221,14 @@
                                            Foreground="#7f8c8d"
                                            TextWrapping="Wrap"
                                            Margin="0,0,0,15"/>
-                                <Button Content="Coming Soon" 
-                                        Background="#95a5a6" 
+                                <Button Content="Open Module →" 
+                                        Background="#27ae60" 
                                         Foreground="White" 
                                         Padding="15,10"
                                         BorderThickness="0"
                                         FontWeight="SemiBold"
-                                        IsEnabled="False"/>
+                                        Cursor="Hand"
+                                        Click="PosButton_Click"/>
                             </StackPanel>
                         </Border>
 

@@ -15,6 +15,9 @@ namespace TradeMaster.Core.Entities
         [MaxLength(100)]
         public string? CustomerName { get; set; }
 
+        public int? CustomerId { get; set; }
+        public Customer? Customer { get; set; }
+
         // Navigation property
         public ICollection<SaleItem> Items { get; set; } = new List<SaleItem>();
     }

@@ -30,11 +30,13 @@ namespace TradeMaster.Desktop
                     // ViewModels
                     services.AddTransient<ProductListViewModel>();
                     services.AddTransient<PosViewModel>();
+                    services.AddTransient<CustomerListViewModel>();
 
                     // Windows
                     services.AddSingleton<MainWindow>();
                     services.AddTransient<ProductListView>();
                     services.AddTransient<PosView>();
+                    services.AddTransient<CustomerListView>();
                 })
                 .Build();
         }
