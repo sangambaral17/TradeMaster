@@ -24,10 +24,14 @@ namespace TradeMaster.Desktop.ViewModels
         [ObservableProperty]
         private Customer? _selectedCustomer;
 
-        public CustomerListViewModel(IRepository<Customer> customerRepository)
+        // Add optional parameter to control automatic background loading (useful for tests)
+        public CustomerListViewModel(IRepository<Customer> customerRepository, bool autoLoad = true)
         {
             _customerRepository = customerRepository;
-            Task.Run(async () => await LoadCustomers());
+            if (autoLoad)
+            {
+                _ = Task.Run(async () => await LoadCustomers());
+            }
         }
 
         partial void OnSearchQueryChanged(string value)
