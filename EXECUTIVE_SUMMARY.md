@@ -1,4 +1,4 @@
-# TradeMaster® Executive Summary
+# Walsong TradeMaster® Executive Summary
 ## For Stakeholders & Investors
 
 **Author:** Sangam Baral  
@@ -13,7 +13,7 @@
 
 ## 💡 The Solution
 
-**TradeMaster®** is a modern, Windows-based inventory and sales management system **specifically designed for Nepal's retail market**. With **NPR currency support**, **offline-first architecture**, and **affordable one-time pricing**, TradeMaster provides:
+**Walsong TradeMaster®** is a modern, Windows-based inventory and sales management system **specifically designed for Nepal's retail market**. With **NPR currency support**, **offline-first architecture**, and **affordable one-time pricing**, Walsong TradeMaster provides:
 
 - Complete inventory tracking with NPR pricing
 - Point-of-sale (POS) system optimized for Nepali businesses
@@ -32,7 +32,7 @@
 
 ### Competitive Advantage
 
-| Feature | TradeMaster® | Cloud SaaS | Legacy Software |
+| Feature | Walsong TradeMaster® | Cloud SaaS | Legacy Software |
 |---------|--------------|------------|------------------|
 | **Pricing** | NPR 30,000-80,000 one-time | NPR 60,000-240,000/year | NPR 50,000-100,000 |
 | **Works Offline** | ✅ Yes | ❌ No | ✅ Yes |
@@ -52,7 +52,7 @@
 ### Intellectual Property
 - **Patent Application Filed**: December 2025
 - **Copyright Protection**: All code and documentation
-- **Trademark**: TradeMaster® registration in progress
+- **Trademark**: Walsong TradeMaster® registration in progress
 
 ## 💼 Business Model
 
@@ -204,6 +204,6 @@ GitHub: [github.com/sangambaral17](https://github.com/sangambaral17)
 
 ---
 
-**TradeMaster® - Empowering Retail Businesses Worldwide**
+**Walsong TradeMaster® - Empowering Retail Businesses Worldwide**
 
 *This document contains confidential and proprietary information. Distribution without permission is prohibited.*

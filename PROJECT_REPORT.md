@@ -1,13 +1,13 @@
-# 📊 TradeMaster - Project Status Report
+# 📊 Walsong TradeMaster - Project Status Report
 
 **Date:** December 3, 2025  
-**Project:** TradeMaster Enterprise System (Nepal Edition)  
+**Project:** Walsong TradeMaster Enterprise System (Nepal Edition)  
 **Version:** 0.2.0 (Beta)
 
 ---
 
 ## 1. Executive Summary
-**TradeMaster** has evolved into a specialized retail solution for the **Nepal Market**. We have successfully implemented the core Point of Sale (POS) system, Product Management, and established a robust documentation workflow. The system now supports **NPR (Nepali Rupees)** natively and is optimized for local retail operations.
+**Walsong TradeMaster** has evolved into a specialized retail solution for the **Nepal Market**. We have successfully implemented the core Point of Sale (POS) system, Product Management, and established a robust documentation workflow. The system now supports **NPR (Nepali Rupees)** natively and is optimized for local retail operations.
 
 ---
 

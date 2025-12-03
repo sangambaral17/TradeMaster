@@ -1,4 +1,4 @@
-# TradeMaster® Enterprise Edition
+# Walsong TradeMaster® Enterprise Edition
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![.NET](https://img.shields.io/badge/.NET-9.0-purple.svg)
@@ -13,7 +13,7 @@
 
 ## 🎯 Overview
 
-TradeMaster® is a professional, desktop-based inventory and sales management system **specially designed for Nepal's retail market**. Built with cutting-edge .NET technology, it provides enterprise-grade features with full support for **Nepali Rupees (NPR)** and local business practices at an affordable price point.
+**Walsong TradeMaster®** is a professional, desktop-based inventory and sales management system **specially designed for Nepal's retail market**. Built with cutting-edge .NET technology, it provides enterprise-grade features with full support for **Nepali Rupees (NPR)** and local business practices at an affordable price point.
 
 ### ✨ Key Features
 
@@ -237,7 +237,7 @@ This software is licensed under a proprietary license. See [LICENSE.txt](./LICEN
 
 **Patent Pending** - Patent application filed December 2025
 
-**Trademark** - TradeMaster® is a trademark of Sangam Baral (registration pending)
+**Trademark** - Walsong TradeMaster® is a trademark of Walsong (registration pending)
 
 ---
 
@@ -292,7 +292,7 @@ This software is licensed under a proprietary license. See [LICENSE.txt](./LICEN
 
 ---
 
-**TradeMaster® - Transforming Retail, One Transaction at a Time**
+**Walsong TradeMaster® - Transforming Retail, One Transaction at a Time**
 
 ⭐ If you're using TradeMaster in your business, we'd love to hear from you!
 

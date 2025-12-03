@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TradeMaster.Desktop"
         mc:Ignorable="d"
-        Title="TradeMaster Enterprise" Height="700" Width="1100"
+        Title="Walsong TradeMaster Enterprise" Height="700" Width="1100"
         WindowStartupLocation="CenterScreen"
         Background="#ecf0f1">
 
@@ -63,7 +63,7 @@
         <Border Background="#2c3e50" Padding="30,25">
             <Grid>
                 <StackPanel>
-                    <TextBlock Text="🏢 TradeMaster Enterprise" 
+                    <TextBlock Text="🏢 Walsong TradeMaster Enterprise" 
                                Foreground="White" 
                                FontSize="32" 
                                FontWeight="Bold"/>
@@ -159,7 +159,7 @@
             <!-- Dashboard Content -->
             <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
                 <StackPanel Margin="30">
-                    <TextBlock Text="Welcome to TradeMaster" 
+                    <TextBlock Text="Welcome to Walsong TradeMaster" 
                                FontSize="28" 
                                FontWeight="Bold" 
                                Foreground="#2c3e50"
@@ -285,7 +285,7 @@
         <!-- Footer -->
         <Border Grid.Row="2" Background="#2c3e50" Padding="30,15">
             <Grid>
-                <TextBlock Text="TradeMaster v0.1.0 Alpha | © 2025" 
+                <TextBlock Text="Walsong TradeMaster v0.2.0 Beta | © 2025" 
                            Foreground="#bdc3c7" 
                            FontSize="13"
                            HorizontalAlignment="Left"/>

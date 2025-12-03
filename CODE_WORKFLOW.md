@@ -1,4 +1,4 @@
-# TradeMaster - Code Workflow & Architecture Guide
+# Walsong TradeMaster - Code Workflow & Architecture Guide
 
 **Author**: Sangam Baral  
 **Role**: Software Engineer  
@@ -8,7 +8,7 @@
 
 ## 🏗️ Architecture Overview
 
-TradeMaster follows the **Clean Architecture** principles combined with the **MVVM (Model-View-ViewModel)** design pattern. This ensures a strict separation of concerns, making the code testable, maintainable, and scalable.
+Walsong TradeMaster follows the **Clean Architecture** principles combined with the **MVVM (Model-View-ViewModel)** design pattern. This ensures a strict separation of concerns, making the code testable, maintainable, and scalable.
 
 ### High-Level Structure
 

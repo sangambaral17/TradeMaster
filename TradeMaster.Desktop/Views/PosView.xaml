@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:converters="clr-namespace:TradeMaster.Desktop.Converters"
         mc:Ignorable="d"
-        Title="Point of Sale - TradeMaster (Nepal Edition)" Height="700" Width="1200"
+        Title="Point of Sale - Walsong TradeMaster (Nepal Edition)" Height="700" Width="1200"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
         Background="#f5f6fa">
