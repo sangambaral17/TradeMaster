@@ -5,15 +5,15 @@
 ![License](https://img.shields.io/badge/license-Proprietary-red.svg)
 ![Status](https://img.shields.io/badge/status-Active%20Development-green.svg)
 
-**Modern Inventory & Sales Management System for Windows**
+**Modern Inventory & Sales Management System for Nepal's Retail Market**
 
-Built with ❤️ by **Sangam Baral** | Patent Pending | © 2025 All Rights Reserved
+🇳🇵 Specially designed for Nepali businesses | Built with ❤️ by **Sangam Baral** | © 2025 All Rights Reserved
 
 ---
 
 ## 🎯 Overview
 
-TradeMaster® is a professional, desktop-based inventory and sales management system designed for small to medium-sized retail businesses. Built with cutting-edge .NET technology, it provides enterprise-grade features at an affordable price point.
+TradeMaster® is a professional, desktop-based inventory and sales management system **specially designed for Nepal's retail market**. Built with cutting-edge .NET technology, it provides enterprise-grade features with full support for **Nepali Rupees (NPR)** and local business practices at an affordable price point.
 
 ### ✨ Key Features
 
@@ -24,6 +24,8 @@ TradeMaster® is a professional, desktop-based inventory and sales management sy
 - ⚙️ **Configuration** - Customizable tax rates, company information, and settings
 - 🔒 **Offline-First** - Works without internet connection
 - 💾 **Local Database** - Your data stays on your computer
+- 🇳🇵 **Nepal-Ready** - NPR currency, Nepali language support (coming soon)
+- 📱 **Local Support** - Customer service in Nepal time zone
 
 ---
 

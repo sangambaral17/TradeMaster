@@ -9,35 +9,38 @@
 
 ## 🎯 The Opportunity
 
-Small and medium-sized retail businesses face a critical challenge: **existing inventory management solutions are either too expensive (cloud-based SaaS at $50-200/month) or too unreliable (spreadsheets and free tools)**. This creates a $2.3 billion market opportunity for affordable, professional desktop software.
+**Nepal's retail market is rapidly digitizing**, but existing inventory management solutions are either too expensive (cloud-based SaaS charging in USD) or too unreliable (spreadsheets and free tools). With **300,000+ small retail businesses** across Nepal and growing consumer demand, there's a significant opportunity for affordable, professional desktop software that understands local business needs.
 
 ## 💡 The Solution
 
-**TradeMaster®** is a modern, Windows-based inventory and sales management system that delivers enterprise-grade functionality at a fraction of the cost of cloud alternatives. With a **one-time purchase model** and **offline-first architecture**, TradeMaster provides:
+**TradeMaster®** is a modern, Windows-based inventory and sales management system **specifically designed for Nepal's retail market**. With **NPR currency support**, **offline-first architecture**, and **affordable one-time pricing**, TradeMaster provides:
 
-- Complete inventory tracking
-- Point-of-sale (POS) system  
+- Complete inventory tracking with NPR pricing
+- Point-of-sale (POS) system optimized for Nepali businesses
 - Customer management
-- Sales analytics and reporting
-- Tax and configuration management
+- Sales analytics and reporting in NPR
+- VAT-ready tax management (13% for Nepal)
+- Future: Nepali language interface
 
 ## 📊 Market Position
 
 ### Target Market
-- **Primary**: 2.5M+ small retail stores in North America
-- **Secondary**: Wholesale distributors, growing e-commerce businesses
-- **Geographic**: Initially US/Canada, expanding globally
+- **Primary**: 300,000+ small retail stores across Nepal
+- **Secondary**: Wholesale distributors in Kathmandu, Pokhara, Chitwan
+- **Geographic**: Nepal (Kathmandu Valley initially), expanding to other major cities
+- **Segments**: General stores, pharmacy, electronics, clothing, restaurants
 
 ### Competitive Advantage
 
 | Feature | TradeMaster® | Cloud SaaS | Legacy Software |
-|---------|--------------|------------|-----------------|
-| **Cost Structure** | One-time $299-799 | $600-2,400/year | $500-1,000 + upgrades |
+|---------|--------------|------------|------------------|
+| **Pricing** | NPR 30,000-80,000 one-time | NPR 60,000-240,000/year | NPR 50,000-100,000 |
 | **Works Offline** | ✅ Yes | ❌ No | ✅ Yes |
+| **Nepal-Ready** | ✅ NPR, VAT 13% | ❌ USD only | ⚠️ Partial |
 | **Modern Tech** | ✅ .NET 9 | ✅ Modern | ❌ Outdated |
-| **Data Privacy** | ✅ On-premise | ❌ Cloud | ✅ On-premise |
+| **Local Support** | ✅ Nepal timezone | ❌ Foreign | ⚠️ Limited |
 
-**ROI for Customers**: Pays for itself in 3-6 months vs. subscription models
+**ROI for Nepali Customers**: Pays for itself in 3-6 months vs. subscription models
 
 ## 🏆 Innovation & IP
 

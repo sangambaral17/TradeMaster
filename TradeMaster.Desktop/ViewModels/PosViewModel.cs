@@ -81,12 +81,16 @@ namespace TradeMaster.Desktop.ViewModels
 
             if (existingItem != null)
             {
+                // Remove and re-add to trigger collection change notification
+                var index = CartItems.IndexOf(existingItem);
+                CartItems.RemoveAt(index);
+                
+                // Update the item
                 existingItem.Quantity++;
                 existingItem.TotalPrice = existingItem.UnitPrice * existingItem.Quantity;
-                // Trigger update manually since SaleItem doesn't implement INotifyPropertyChanged yet
-                // For a real app, SaleItem should be observable or wrapped in a ViewModel
-                var index = CartItems.IndexOf(existingItem);
-                CartItems[index] = existingItem; 
+                
+                // Add it back at the same position
+                CartItems.Insert(index, existingItem);
             }
             else
             {
