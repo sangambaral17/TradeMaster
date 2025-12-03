@@ -242,12 +242,11 @@ This software is licensed under a proprietary license. See [LICENSE.txt](./LICEN
 ## 👤 Author
 
 **Sangam Baral**  
-*Software Architect & Inventor*
+*Software Engineer*
 
-- Email: sangambaral@example.com
-- LinkedIn: [linkedin.com/in/sangambaral](https://linkedin.com/in/sangambaral)
-- Portfolio: [sangambaral.dev](https://sangambaral.dev)
-- GitHub: [@sangambaral](https://github.com/sangambaral)
+- Email: sangambarallnw@gmail.com
+- LinkedIn: [linkedin.com/in/sangambaral17](https://www.linkedin.com/in/sangambaral17)
+- GitHub: [github.com/sangambaral17](https://github.com/sangambaral17)
 
 ---
 

@@ -418,13 +418,13 @@ TradeMaster is built using cutting-edge Microsoft technologies:
 ### Author & Creator
 
 **Sangam Baral**  
-*Software Architect & Inventor*
+*Software Engineer*
 
 Sangam Baral is the sole creator and owner of TradeMaster®. With extensive experience in enterprise software development and a passion for solving real-world business problems, Sangam designed TradeMaster to bridge the gap between expensive cloud solutions and unreliable free tools.
 
-**Contact**: sangambaral@example.com (update with real email)  
-**LinkedIn**: linkedin.com/in/sangambaral (update with real profile)  
-**Portfolio**: sangambaral.dev (update with real website)
+**Contact**: sangambarallnw@gmail.com  
+**LinkedIn**: [linkedin.com/in/sangambaral17](https://www.linkedin.com/in/sangambaral17)  
+**GitHub**: [github.com/sangambaral17](https://github.com/sangambaral17)
 
 ---
 

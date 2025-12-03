@@ -172,10 +172,10 @@ Small and medium-sized retail businesses face a critical challenge: **existing i
 ## 📞 Contact
 
 **Sangam Baral**  
-Founder & CEO  
-Email: sangambaral@example.com  
-Phone: +XXX-XXX-XXXX  
-LinkedIn: linkedin.com/in/sangambaral
+Founder & Software Engineer  
+Email: sangambarallnw@gmail.com  
+LinkedIn: [linkedin.com/in/sangambaral17](https://www.linkedin.com/in/sangambaral17)  
+GitHub: [github.com/sangambaral17](https://github.com/sangambaral17)
 
 ---
 
