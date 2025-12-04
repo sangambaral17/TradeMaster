@@ -78,15 +78,15 @@ TradeMaster is an enterprise-grade **Windows desktop application** that streamli
 
 #### Data Management
 - **Search & Filter**: Quickly find products by name, SKU, or category
+- **Barcode Integration**: Scan products directly into the system using any standard scanner
 - **Excel Import/Export**: Bulk import product catalogs (Future Enhancement)
-- **Barcode Integration**: Scan products directly into the system (Future Enhancement)
 
 ---
 
 ### 2. 💰 Point of Sale (POS) System
 
 #### Transaction Processing
-- **Fast Checkout**: Add products to cart with a single click
+- **Fast Checkout**: Add products to cart with a single click or barcode scan
 - **Real-Time Calculations**: Automatic subtotal, tax, and total computation
 - **Flexible Pricing**: Support for discounts and promotions (Future Enhancement)
 - **Multiple Payment Methods**: Cash, card, and mixed payments (Future Enhancement)
@@ -95,7 +95,7 @@ TradeMaster is an enterprise-grade **Windows desktop application** that streamli
 - **Clean Interface**: Distraction-free POS screen for fast transactions
 - **Product Search**: Find products quickly during checkout
 - **Shopping Cart**: Review items before completing sale
-- **Receipt Generation**: Print professional invoices (Future Enhancement)
+- **Receipt Generation**: Print professional thermal receipts (80mm)
 
 #### Business Features
 - **Transaction History**: Complete audit trail of all sales
@@ -108,7 +108,7 @@ TradeMaster is an enterprise-grade **Windows desktop application** that streamli
 
 - **Customer Database**: Store customer information (name, email, phone, address)
 - **Purchase History**: Track what each customer has bought
-- **Customer Insights**: Identify your best customers (Future Enhancement)
+- **Customer Insights**: Identify your best customers
 - **Loyalty Programs**: Support for points and rewards (Future Enhancement)
 
 ---
@@ -124,14 +124,13 @@ TradeMaster is an enterprise-grade **Windows desktop application** that streamli
   
 #### Advanced Reports
 - **Sales History**: Filter transactions by date range
-- **Revenue Analytics**: Track sales trends over time (Future Enhancement)
-- **Product Performance**: Best-selling and slow-moving products (Future Enhancement)
+- **Revenue Analytics**: Track sales trends over time
+- **Product Performance**: Best-selling and slow-moving products
 - **Profit Margins**: Analyze profitability by product or category (Future Enhancement)
 
 #### Export Capabilities
 - **PDF Reports**: Professional formatted reports (Future Enhancement)
 - **Excel Exports**: Data analysis in spreadsheets (Future Enhancement)
-- **Email Reports**: Automated daily/weekly summaries (Future Enhancement)
 
 ---
 
@@ -139,9 +138,10 @@ TradeMaster is an enterprise-grade **Windows desktop application** that streamli
 
 - **Company Information**: Customize with your business details
 - **Tax Configuration**: Set applicable tax rates for your region
-- **Currency Settings**: Support for multiple currencies
-- **User Management**: Multiple user accounts with role-based access (Future Enhancement)
-- **Backup & Restore**: Protect your business data (Future Enhancement)
+- **Currency Settings**: Support for multiple currencies (NPR/USD)
+- **User Management**: Multiple user accounts with role-based access (Admin/Cashier)
+- **Backup & Restore**: Protect your business data with local backups
+- **Localization**: Switch between English and Nepali languages
 
 ---
 
@@ -305,28 +305,28 @@ TradeMaster is built using cutting-edge Microsoft technologies:
 
 ## Roadmap & Future Enhancements
 
-### Phase 1: Core System (✅ Complete - December 2025)
+### Phase 1: Core System (✅ Complete)
 - [x] Product Management
 - [x] Basic POS functionality
 - [x] Database foundation
 - [x] Modern UI/UX
 
-### Phase 2: Enhanced Features (🚧 Q1 2026)
-- [ ] Customer Management module
-- [ ] Sales History & Reports
-- [ ] Dashboard with real-time metrics
-- [ ] Settings & Configuration
-- [ ] Tax rate management
+### Phase 2: Enhanced Features (✅ Complete)
+- [x] Customer Management module
+- [x] Sales History & Reports
+- [x] Dashboard with real-time metrics
+- [x] Settings & Configuration
+- [x] Tax rate management
 
-### Phase 3: Advanced Capabilities (📅 Q2 2026)
-- [ ] Barcode scanning support
-- [ ] Receipt printing
-- [ ] Multiple payment methods
-- [ ] Discount & promotion engine
-- [ ] Excel import/export
+### Phase 3: Advanced Capabilities (✅ Complete)
+- [x] Barcode scanning support
+- [x] Receipt printing
+- [x] Inventory alerts & reordering
+- [x] User management & security
+- [x] Database backup & restore
+- [x] Localization (English/Nepali)
 
-### Phase 4: Enterprise Features (📅 Q3 2026)
-- [ ] Multi-user support with role-based access
+### Phase 4: Enterprise Features (📅 Q1 2026)
 - [ ] Web Dashboard (React.js)
 - [ ] REST API for integrations
 - [ ] Cloud backup & sync (optional)
@@ -499,7 +499,7 @@ Sangam Baral is the sole creator and owner of TradeMaster®. With extensive expe
 ---
 
 **Document Version**: 1.0  
-**Last Updated**: December 2, 2025  
+**Last Updated**: December 4, 2025  
 **Author**: Sangam Baral  
 
 ---

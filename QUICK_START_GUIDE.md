@@ -108,22 +108,20 @@ When you open TradeMaster, you see the **Dashboard**:
 
 ### Configure Your Business Information
 
-1. Click **"Settings"** from the sidebar *(coming in next update)*
+1. Click **"Settings"** from the sidebar
 2. Enter your company details:
    - Business Name
    - Address
    - Phone Number
    - Email
+3. Click "Save Settings"
 
-### Set Tax Rate
+### Set Tax Rate & Language
 
 1. In Settings, find "Tax Configuration"
-2. Enter your local tax rate
-   - Example: 13% for VAT
-   - Enter as decimal: `0.13`
-3. Click Save
-
-The tax will automatically apply to all future sales!
+2. Enter your local tax rate (e.g., 0.13 for 13% VAT)
+3. Select your preferred language (English or Nepali)
+4. Click Save
 
 ---
 
@@ -133,16 +131,25 @@ The tax will automatically apply to all future sales!
 1. Go to **Product Management**
 2. View the "Stock" column
 3. Look for low quantities (highlighted)
+4. Or check the **Dashboard** for "Low Stock Alerts"
 
 ### View Sales History
-1. Click **"Sales Reports"** from sidebar *(coming soon)*
+1. Click **"Sales Reports"** from sidebar
 2. See all completed transactions
-3. Filter by date range
+3. Filter by date range (Today, Week, Month)
+4. View "Top Selling Products" analytics
 
 ### Search for Products
 - Use the search box at the top of Product Management
 - Type product name or SKU
 - Results filter instantly
+
+### Using Barcode Scanner
+1. Connect your USB/Bluetooth scanner
+2. Go to **Point of Sale**
+3. Scan a product barcode
+4. The item is automatically added to the cart!
+   - If not found, you'll hear a beep and see a message
 
 ---
 
@@ -285,6 +292,6 @@ Your input helps us make TradeMaster better for everyone!
 ---
 
 **Document Version**: 1.0  
-**Last Updated**: December 2, 2025  
+**Last Updated**: December 4, 2025  
 **Author**: Sangam Baral  
 **Copyright © 2025 Sangam Baral. All Rights Reserved.**
