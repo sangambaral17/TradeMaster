@@ -131,7 +131,7 @@
                             <TextBlock Text="Currency Symbol:" Style="{StaticResource SettingLabel}"/>
                             <ComboBox Grid.Column="1" 
                                      ItemsSource="{Binding CurrencyOptions}"
-                                     SelectedValue="{Binding CurrencySymbol}"
+                                     SelectedValue="{Binding CurrencySymbol, Mode=TwoWay}"
                                      SelectedValuePath="Symbol"
                                      DisplayMemberPath="Display"
                                      Padding="10,8" FontSize="14"/>
@@ -152,7 +152,7 @@
                             <TextBlock Text="Display Language:" Style="{StaticResource SettingLabel}"/>
                             <ComboBox Grid.Column="1" 
                                      ItemsSource="{Binding Languages}"
-                                     SelectedValue="{Binding SelectedLanguage}"
+                                     SelectedValue="{Binding SelectedLanguage, Mode=TwoWay}"
                                      SelectedValuePath="Code"
                                      DisplayMemberPath="DisplayName"
                                      Padding="10,8" FontSize="14"/>
