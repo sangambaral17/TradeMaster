@@ -90,6 +90,9 @@ namespace TradeMaster.Infrastructure.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("LowStockThreshold")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -97,6 +100,9 @@ namespace TradeMaster.Infrastructure.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ReorderQuantity")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Sku")
                         .HasMaxLength(50)
@@ -116,8 +122,10 @@ namespace TradeMaster.Infrastructure.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
+                            LowStockThreshold = 5,
                             Name = "Laptop",
                             Price = 1200.00m,
+                            ReorderQuantity = 20,
                             Sku = "ELEC-001",
                             StockQuantity = 10
                         },
@@ -125,8 +133,10 @@ namespace TradeMaster.Infrastructure.Migrations
                         {
                             Id = 2,
                             CategoryId = 1,
+                            LowStockThreshold = 5,
                             Name = "Smartphone",
                             Price = 800.00m,
+                            ReorderQuantity = 20,
                             Sku = "ELEC-002",
                             StockQuantity = 20
                         },
@@ -134,8 +144,10 @@ namespace TradeMaster.Infrastructure.Migrations
                         {
                             Id = 3,
                             CategoryId = 2,
+                            LowStockThreshold = 5,
                             Name = "Rice (5kg)",
                             Price = 15.00m,
+                            ReorderQuantity = 20,
                             Sku = "GROC-001",
                             StockQuantity = 50
                         });
@@ -176,6 +188,11 @@ namespace TradeMaster.Infrastructure.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("Quantity")
                         .HasColumnType("INTEGER");
 
@@ -195,6 +212,60 @@ namespace TradeMaster.Infrastructure.Migrations
                     b.HasIndex("SaleId");
 
                     b.ToTable("SaleItems");
+                });
+
+            modelBuilder.Entity("TradeMaster.Core.Entities.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(200)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FullName")
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("LastLoginDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedDate = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FullName = "System Administrator",
+                            IsActive = true,
+                            PasswordHash = "8YUCkBjZBRT64gNF+ikO9v8QIubS1EVYaricHgITVR8=",
+                            Role = "Admin",
+                            Username = "admin"
+                        });
                 });
 
             modelBuilder.Entity("TradeMaster.Core.Entities.Product", b =>

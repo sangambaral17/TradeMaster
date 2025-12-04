@@ -17,6 +17,9 @@ namespace TradeMaster.Core.Entities
         [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
 
+        [MaxLength(10)]
+        public string Currency { get; set; } = "USD";
+
         public int StockQuantity { get; set; }
 
         public int CategoryId { get; set; }

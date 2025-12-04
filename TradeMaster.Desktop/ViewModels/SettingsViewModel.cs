@@ -40,6 +40,13 @@ namespace TradeMaster.Desktop.ViewModels
             new LanguageOption { Code = "ne-NP", Name = "नेपाली (Nepali)", Flag = "🇳🇵" }
         };
 
+        public ObservableCollection<CurrencyOption> CurrencyOptions { get; } = new()
+        {
+            new CurrencyOption { Code = "USD", Symbol = "$", Display = "USD - $" },
+            new CurrencyOption { Code = "AUD", Symbol = "A$", Display = "AUD - A$" },
+            new CurrencyOption { Code = "NPR", Symbol = "Rs.", Display = "NPR - Rs." }
+        };
+
         // Inventory Settings
         [ObservableProperty]
         private int _defaultLowStockThreshold = 5;
@@ -238,5 +245,12 @@ namespace TradeMaster.Desktop.ViewModels
         public string Name { get; set; } = string.Empty;
         public string Flag { get; set; } = string.Empty;
         public string DisplayName => $"{Flag} {Name}";
+    }
+
+    public class CurrencyOption
+    {
+        public string Code { get; set; } = string.Empty;
+        public string Symbol { get; set; } = string.Empty;
+        public string Display { get; set; } = string.Empty;
     }
 }

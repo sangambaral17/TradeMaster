@@ -126,11 +126,15 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="200"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Text="Currency Symbol:" Style="{StaticResource SettingLabel}"/>
-                            <TextBox Grid.Column="1" Text="{Binding CurrencySymbol, UpdateSourceTrigger=PropertyChanged}" 
-                                    Padding="10,8" FontSize="14"/>
+                            <ComboBox Grid.Column="1" 
+                                     ItemsSource="{Binding CurrencyOptions}"
+                                     SelectedValue="{Binding CurrencySymbol}"
+                                     SelectedValuePath="Symbol"
+                                     DisplayMemberPath="Display"
+                                     Padding="10,8" FontSize="14"/>
                         </Grid>
                     </StackPanel>
                 </Border>

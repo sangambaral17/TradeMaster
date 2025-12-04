@@ -55,7 +55,7 @@ namespace TradeMaster.Desktop.ViewModels
         private async Task AddProduct()
         {
             var categories = await _categoryRepository.GetAllAsync();
-            var dialog = new ProductEditDialog(categories.ToList());
+            var dialog = new ProductEditDialog(categories.ToList(), null, _categoryRepository);
             
             if (dialog.ShowDialog() == true && dialog.Product != null)
             {
@@ -80,7 +80,7 @@ namespace TradeMaster.Desktop.ViewModels
             if (SelectedProduct == null) return;
 
             var categories = await _categoryRepository.GetAllAsync();
-            var dialog = new ProductEditDialog(categories.ToList(), SelectedProduct);
+            var dialog = new ProductEditDialog(categories.ToList(), SelectedProduct, _categoryRepository);
             
             if (dialog.ShowDialog() == true && dialog.Product != null)
             {

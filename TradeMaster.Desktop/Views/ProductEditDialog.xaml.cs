@@ -1,5 +1,6 @@
 using System.Windows;
 using TradeMaster.Core.Entities;
+using TradeMaster.Core.Interfaces;
 
 namespace TradeMaster.Desktop.Views
 {
@@ -8,13 +9,27 @@ namespace TradeMaster.Desktop.Views
         public Product? Product { get; private set; }
 
         private readonly bool _isEditMode;
+        private readonly IRepository<Category> _categoryRepository;
+        private List<Category> _categories;
 
-        public ProductEditDialog(List<Category> categories, Product? existingProduct = null)
+        public ProductEditDialog(List<Category> categories, Product? existingProduct = null, IRepository<Category>? categoryRepository = null)
         {
             InitializeComponent();
 
+            _categoryRepository = categoryRepository;
+            _categories = categories;
+
+            // Initialize currency options
+            CurrencyComboBox.ItemsSource = new[]
+            {
+                new { Code = "USD", Display = "USD $" },
+                new { Code = "AUD", Display = "AUD A$" },
+                new { Code = "NPR", Display = "NPR Rs." }
+            };
+            CurrencyComboBox.SelectedValue = "USD";
+
             // Populate categories
-            CategoryComboBox.ItemsSource = categories;
+            CategoryComboBox.ItemsSource = _categories;
 
             // Edit mode vs Add mode
             _isEditMode = existingProduct != null;
@@ -31,11 +46,33 @@ namespace TradeMaster.Desktop.Views
             NameTextBox.Text = product.Name;
             SkuTextBox.Text = product.Sku;
             CategoryComboBox.SelectedValue = product.CategoryId;
+            CurrencyComboBox.SelectedValue = product.Currency ?? "USD";
             PriceTextBox.Text = product.Price.ToString("F2");
             StockTextBox.Text = product.StockQuantity.ToString();
             
             // Store the product ID for updates
             Product = product;
+        }
+
+        private async void ManageCategories_Click(object sender, RoutedEventArgs e)
+        {
+            if (_categoryRepository == null)
+            {
+                MessageBox.Show("Category management is not available.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            var dialog = new CategoryManagementDialog(_categoryRepository);
+            dialog.ShowDialog();
+
+            // Reload categories if changed
+            if (dialog.CategoriesChanged)
+            {
+                _categories = (await _categoryRepository.GetAllAsync()).ToList();
+                var selectedId = CategoryComboBox.SelectedValue;
+                CategoryComboBox.ItemsSource = _categories;
+                CategoryComboBox.SelectedValue = selectedId;
+            }
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -55,6 +92,7 @@ namespace TradeMaster.Desktop.Views
                     Product.Name = NameTextBox.Text.Trim();
                     Product.Sku = string.IsNullOrWhiteSpace(SkuTextBox.Text) ? null : SkuTextBox.Text.Trim();
                     Product.CategoryId = (int)CategoryComboBox.SelectedValue;
+                    Product.Currency = CurrencyComboBox.SelectedValue?.ToString() ?? "USD";
                     Product.Price = decimal.Parse(PriceTextBox.Text);
                     Product.StockQuantity = int.Parse(StockTextBox.Text);
                 }
@@ -66,6 +104,7 @@ namespace TradeMaster.Desktop.Views
                         Name = NameTextBox.Text.Trim(),
                         Sku = string.IsNullOrWhiteSpace(SkuTextBox.Text) ? null : SkuTextBox.Text.Trim(),
                         CategoryId = (int)CategoryComboBox.SelectedValue,
+                        Currency = CurrencyComboBox.SelectedValue?.ToString() ?? "USD",
                         Price = decimal.Parse(PriceTextBox.Text),
                         StockQuantity = int.Parse(StockTextBox.Text)
                     };
