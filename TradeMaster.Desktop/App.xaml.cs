@@ -6,6 +6,7 @@ using TradeMaster.Core.Interfaces;
 using TradeMaster.Infrastructure.Data;
 using TradeMaster.Desktop.ViewModels;
 using TradeMaster.Desktop.Views;
+using TradeMaster.Desktop.Services;
 
 namespace TradeMaster.Desktop
 {
@@ -28,11 +29,24 @@ namespace TradeMaster.Desktop
                     services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
                     services.AddScoped<ISaleRepository, SaleRepository>();
 
+                    // Services (Singletons - shared across app)
+                    services.AddSingleton<SettingsService>();
+                    services.AddSingleton<LocalizationService>();
+
+                    // Services (Scoped - per request)
+                    services.AddScoped<BackupService>();
+                    services.AddScoped<AuthenticationService>();
+                    services.AddScoped<InventoryAlertService>();
+                    services.AddScoped<ReportingService>();
+                    services.AddScoped<ReceiptService>();
+                    services.AddScoped<BarcodeService>();
+
                     // ViewModels
                     services.AddTransient<ProductListViewModel>();
                     services.AddTransient<PosViewModel>();
                     services.AddTransient<CustomerListViewModel>();
                     services.AddTransient<SalesHistoryViewModel>();
+                    services.AddTransient<SettingsViewModel>();
 
                     // Windows
                     services.AddSingleton<MainWindow>();
@@ -40,6 +54,9 @@ namespace TradeMaster.Desktop
                     services.AddTransient<PosView>();
                     services.AddTransient<CustomerListView>();
                     services.AddTransient<SalesHistoryView>();
+                    services.AddTransient<SettingsView>();
+                    services.AddTransient<LoginWindow>();
+                    // Note: ReceiptPreviewDialog takes runtime params, create manually
                 })
                 .Build();
         }

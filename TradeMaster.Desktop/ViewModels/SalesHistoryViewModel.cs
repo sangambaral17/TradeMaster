@@ -42,7 +42,7 @@ namespace TradeMaster.Desktop.ViewModels
         [RelayCommand]
         private async Task LoadSales()
         {
-            var sales = await _saleRepository.GetSalesWithDetailsAsync();
+            var sales = await _saleRepository.GetSalesWithItemsAsync();
             Sales = new ObservableCollection<Sale>(sales);
             FilterSales();
         }

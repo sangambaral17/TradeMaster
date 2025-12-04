@@ -59,18 +59,49 @@
 
 ## 3. Next Steps (Future Enhancements)
 
-### 📅 Planned Features
-- [ ] **Advanced Reporting**:
-  - Daily/Weekly/Monthly sales summaries.
-  - Top-selling products analytics.
-  - Customer purchase history reports.
-  - Exportable reports (PDF/Excel).
-- [ ] **Nepali Language Support**: Add resource files for UI translation (English/Nepali toggle).
-- [ ] **Receipt Printing**: Generate printable receipts for thermal printers.
-- [ ] **Barcode Scanning**: Integrate barcode scanner input for faster POS operations.
-- [ ] **Inventory Alerts**: Low stock warnings and reorder notifications.
-- [ ] **User Management**: Multi-user support with role-based access control.
-- [ ] **Backup & Restore**: Database backup and restore functionality.
+### ✅ Phase 5: Advanced Reporting (Completed)
+- [x] **Reporting Engine**: Created `ReportingService` for aggregating sales data.
+- [x] **Analytics**: Implemented daily, weekly, and monthly sales summaries.
+- [x] **Insights**: Top-selling products and customer purchase history analytics.
+- [x] **Visualization**: Dedicated `ReportsView` for data presentation.
+
+### ✅ Phase 6: Localization (Completed)
+- [x] **Bilingual Support**: Full support for English and Nepali languages.
+- [x] **Dynamic Switching**: `LocalizationService` allows runtime language toggling.
+- [x] **Resource Management**: Centralized string resources for easy translation updates.
+
+### ✅ Phase 7: Receipt Printing (Completed)
+- [x] **Thermal Printing**: `ReceiptService` generates layouts optimized for 80mm thermal printers.
+- [x] **Preview**: `ReceiptPreviewDialog` allows verification before printing.
+- [x] **Customization**: Includes company details and dynamic currency formatting.
+
+### ✅ Phase 8: Barcode Scanning (Completed)
+- [x] **Scanner Integration**: `BarcodeService` intercepts keyboard input from scanners.
+- [x] **Workflow**: Auto-adds products to POS cart upon scan.
+- [x] **Feedback**: Audio/Visual feedback for successful or failed scans.
+
+### ✅ Phase 9: Inventory Alerts (Completed)
+- [x] **Stock Monitoring**: `InventoryAlertService` tracks low stock levels.
+- [x] **Thresholds**: Configurable `LowStockThreshold` per product.
+- [x] **Reorder Logic**: Generates reorder suggestions based on stock velocity.
+
+### ✅ Phase 10: User Management (Completed)
+- [x] **Authentication**: Secure login system with `AuthenticationService`.
+- [x] **Security**: SHA256 password hashing with salt.
+- [x] **Roles**: Infrastructure for Admin, Manager, and Cashier roles.
+- [x] **User Entity**: Database support for user profiles and credentials.
+
+### ✅ Phase 11: Backup & Restore (Completed)
+- [x] **Data Safety**: `BackupService` performs hot backups of the SQLite database.
+- [x] **Restore**: Safe restore mechanism with automatic safety backups.
+- [x] **Management**: Tools to manage and clean up old backup files.
+
+### ✅ Phase 12: Settings Module (Completed)
+- [x] **Central Configuration**: Unified `SettingsView` for all app preferences.
+- [x] **Persistence**: JSON-based settings storage via `SettingsService`.
+- [x] **Control**: UI for managing Language, Backup paths, and Company Info.
+
+> **Note:** For detailed technical documentation of these phases, please refer to `PHASE_COMPLETION_DOCS.md`.
 
 ---
 

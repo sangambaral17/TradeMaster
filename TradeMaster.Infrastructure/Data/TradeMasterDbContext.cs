@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TradeMaster.Core.Entities;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace TradeMaster.Infrastructure.Data
 {
@@ -10,6 +12,7 @@ namespace TradeMaster.Infrastructure.Data
         public DbSet<Sale> Sales { get; set; }
         public DbSet<SaleItem> SaleItems { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<User> Users { get; set; }
 
         // Constructor for Dependency Injection
         public TradeMasterDbContext(DbContextOptions<TradeMasterDbContext> options) : base(options)
@@ -40,6 +43,27 @@ namespace TradeMaster.Infrastructure.Data
                 new Product { Id = 2, Name = "Smartphone", Price = 800.00m, StockQuantity = 20, CategoryId = 1, Sku = "ELEC-002" },
                 new Product { Id = 3, Name = "Rice (5kg)", Price = 15.00m, StockQuantity = 50, CategoryId = 2, Sku = "GROC-001" }
             );
+
+            // Seed default admin user (password: admin123)
+            modelBuilder.Entity<User>().HasData(
+                new User 
+                { 
+                    Id = 1, 
+                    Username = "admin", 
+                    PasswordHash = HashPassword("admin123"), 
+                    Role = UserRoles.Admin,
+                    FullName = "System Administrator",
+                    IsActive = true,
+                    CreatedDate = new DateTime(2025, 1, 1)
+                }
+            );
+        }
+
+        private static string HashPassword(string password)
+        {
+            using var sha256 = SHA256.Create();
+            var bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password + "TradeMasterSalt2025"));
+            return Convert.ToBase64String(bytes);
         }
     }
 }

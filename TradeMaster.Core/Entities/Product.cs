@@ -21,7 +21,15 @@ namespace TradeMaster.Core.Entities
 
         public int CategoryId { get; set; }
 
+        // Inventory Alert Properties
+        public int LowStockThreshold { get; set; } = 5;
+        public int ReorderQuantity { get; set; } = 20;
+
         // Navigation property
         public Category? Category { get; set; }
+
+        // Computed property for checking low stock
+        [NotMapped]
+        public bool IsLowStock => StockQuantity <= LowStockThreshold;
     }
 }

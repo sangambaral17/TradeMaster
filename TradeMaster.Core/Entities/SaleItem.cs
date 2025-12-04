@@ -13,6 +13,9 @@ namespace TradeMaster.Core.Entities
         public int ProductId { get; set; }
         public Product? Product { get; set; }
 
+        [MaxLength(200)]
+        public string ProductName { get; set; } = string.Empty; // Store name at time of sale
+
         public int Quantity { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
@@ -22,3 +25,4 @@ namespace TradeMaster.Core.Entities
         public decimal TotalPrice { get; set; } // UnitPrice * Quantity
     }
 }
+

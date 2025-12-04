@@ -10,7 +10,7 @@ namespace TradeMaster.Infrastructure.Data
         {
         }
 
-        public async Task<IEnumerable<Sale>> GetSalesWithDetailsAsync()
+        public async Task<IEnumerable<Sale>> GetSalesWithItemsAsync()
         {
             return await _context.Sales
                 .Include(s => s.Items)

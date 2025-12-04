@@ -1,0 +1,138 @@
+<Window x:Class="TradeMaster.Desktop.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Login - TradeMaster" 
+        Height="450" Width="400"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="#2c3e50">
+    
+    <Border CornerRadius="10" Background="#2c3e50">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Header -->
+            <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,40,0,0">
+                <TextBlock Text="🏢" FontSize="64" HorizontalAlignment="Center"/>
+                <TextBlock Text="TradeMaster" 
+                          FontSize="32" 
+                          FontWeight="Bold" 
+                          Foreground="White" 
+                          HorizontalAlignment="Center"
+                          Margin="0,10,0,0"/>
+                <TextBlock Text="Enterprise Inventory &amp; Sales Management" 
+                          FontSize="12" 
+                          Foreground="#bdc3c7" 
+                          HorizontalAlignment="Center"
+                          Margin="0,5,0,0"/>
+            </StackPanel>
+            
+            <!-- Login Form -->
+            <Border Grid.Row="1" 
+                   Background="White" 
+                   CornerRadius="20,20,10,10" 
+                   Margin="0,30,0,0"
+                   Padding="40,30">
+                <StackPanel VerticalAlignment="Center">
+                    
+                    <TextBlock Text="Sign In" 
+                              FontSize="24" 
+                              FontWeight="Bold" 
+                              Foreground="#2c3e50"
+                              HorizontalAlignment="Center"
+                              Margin="0,0,0,30"/>
+                    
+                    <!-- Username -->
+                    <TextBlock Text="Username" 
+                              FontSize="13" 
+                              Foreground="#7f8c8d" 
+                              Margin="0,0,0,8"/>
+                    <TextBox x:Name="UsernameTextBox" 
+                            Padding="12" 
+                            FontSize="14"
+                            BorderBrush="#ddd"
+                            BorderThickness="1"/>
+                    
+                    <!-- Password -->
+                    <TextBlock Text="Password" 
+                              FontSize="13" 
+                              Foreground="#7f8c8d" 
+                              Margin="0,20,0,8"/>
+                    <PasswordBox x:Name="PasswordBox" 
+                                Padding="12" 
+                                FontSize="14"
+                                BorderBrush="#ddd"
+                                BorderThickness="1"/>
+                    
+                    <!-- Error Message -->
+                    <TextBlock x:Name="ErrorMessage" 
+                              Text="" 
+                              Foreground="#e74c3c" 
+                              FontSize="12"
+                              Margin="0,15,0,0"
+                              HorizontalAlignment="Center"
+                              Visibility="Collapsed"/>
+                    
+                    <!-- Login Button -->
+                    <Button x:Name="LoginButton"
+                           Content="Login"
+                           Margin="0,25,0,0"
+                           Padding="15"
+                           FontSize="16"
+                           FontWeight="SemiBold"
+                           Background="#3498db"
+                           Foreground="White"
+                           BorderThickness="0"
+                           Cursor="Hand"
+                           Click="LoginButton_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" 
+                                       CornerRadius="6" 
+                                       Padding="{TemplateBinding Padding}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#3498db"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#2980b9"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    
+                    <!-- Skip Login (for development) -->
+                    <Button x:Name="SkipButton"
+                           Content="Skip Login (Dev Mode)"
+                           Margin="0,15,0,0"
+                           Padding="10"
+                           FontSize="12"
+                           Background="Transparent"
+                           Foreground="#95a5a6"
+                           BorderThickness="0"
+                           Cursor="Hand"
+                           Click="SkipButton_Click"/>
+                    
+                    <TextBlock Text="Default: admin / admin123" 
+                              FontSize="11"
+                              Foreground="#bdc3c7" 
+                              HorizontalAlignment="Center"
+                              Margin="0,20,0,0"/>
+                    
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

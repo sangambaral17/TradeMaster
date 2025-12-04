@@ -4,6 +4,6 @@ namespace TradeMaster.Core.Interfaces
 {
     public interface ISaleRepository : IRepository<Sale>
     {
-        Task<IEnumerable<Sale>> GetSalesWithDetailsAsync();
+        Task<IEnumerable<Sale>> GetSalesWithItemsAsync();
     }
 }
