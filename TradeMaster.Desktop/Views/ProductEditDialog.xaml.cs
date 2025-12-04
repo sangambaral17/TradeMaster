@@ -9,7 +9,7 @@ namespace TradeMaster.Desktop.Views
         public Product? Product { get; private set; }
 
         private readonly bool _isEditMode;
-        private readonly IRepository<Category> _categoryRepository;
+        private readonly IRepository<Category>? _categoryRepository;
         private List<Category> _categories;
 
         public ProductEditDialog(List<Category> categories, Product? existingProduct = null, IRepository<Category>? categoryRepository = null)
