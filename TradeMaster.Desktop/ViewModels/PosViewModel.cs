@@ -172,8 +172,19 @@ namespace TradeMaster.Desktop.ViewModels
                 // 3. Save the Sale
                 await _saleRepository.AddAsync(sale);
 
-                MessageBox.Show($"Transaction Completed!\nTotal: {TotalAmount:C2}", 
-                    "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                // 4. Ask if user wants to share bill
+                var shareResult = MessageBox.Show(
+                    $"Transaction Completed!\nTotal: {TotalAmount:C2}\n\nWould you like to share the bill with the customer?", 
+                    "Success", 
+                    MessageBoxButton.YesNo, 
+                    MessageBoxImage.Question);
+
+                if (shareResult == MessageBoxResult.Yes)
+                {
+                    // Show share dialog
+                    var shareDialog = new TradeMaster.Desktop.Views.ShareBillDialog(sale, sale.Items.ToList());
+                    shareDialog.ShowDialog();
+                }
 
                 ClearCart();
                 
