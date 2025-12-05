@@ -1,0 +1,68 @@
+<UserControl x:Class="TradeMaster.Desktop.Controls.LoadingIndicator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="100">
+    <UserControl.Resources>
+        <!-- Spinning animation -->
+        <Storyboard x:Key="SpinAnimation" RepeatBehavior="Forever">
+            <DoubleAnimation Storyboard.TargetName="SpinnerRotate"
+                           Storyboard.TargetProperty="Angle"
+                           From="0" To="360" Duration="0:0:1.5"
+                           AutoReverse="False"/>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Grid x:Name="RootGrid" Background="Transparent">
+        <!-- Overlay mode background -->
+        <Rectangle x:Name="OverlayBackground" 
+                   Fill="Black" 
+                   Opacity="0.3"
+                   Visibility="Collapsed"/>
+
+        <!-- Loading spinner -->
+        <Viewbox Width="{Binding SpinnerSize, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                 Height="{Binding SpinnerSize, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center">
+            <Canvas Width="100" Height="100">
+                <Canvas.RenderTransform>
+                    <RotateTransform x:Name="SpinnerRotate" CenterX="50" CenterY="50" Angle="0"/>
+                </Canvas.RenderTransform>
+
+                <!-- Spinner circle segments -->
+                <Path Data="M 50,10 A 40,40 0 0,1 90,50" 
+                      Stroke="{Binding SpinnerColor, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                      StrokeThickness="8" 
+                      StrokeStartLineCap="Round" 
+                      StrokeEndLineCap="Round"
+                      Opacity="0.9"/>
+                <Path Data="M 90,50 A 40,40 0 0,1 50,90" 
+                      Stroke="{Binding SpinnerColor, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                      StrokeThickness="8" 
+                      StrokeStartLineCap="Round" 
+                      StrokeEndLineCap="Round"
+                      Opacity="0.6"/>
+                <Path Data="M 50,90 A 40,40 0 0,1 10,50" 
+                      Stroke="{Binding SpinnerColor, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                      StrokeThickness="8" 
+                      StrokeStartLineCap="Round" 
+                      StrokeEndLineCap="Round"
+                      Opacity="0.3"/>
+            </Canvas>
+        </Viewbox>
+
+        <!-- Loading text -->
+        <TextBlock x:Name="LoadingText"
+                   Text="{Binding LoadingMessage, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                   FontSize="14"
+                   FontWeight="Medium"
+                   Foreground="{Binding SpinnerColor, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Margin="0,80,0,0"
+                   Visibility="{Binding ShowMessage, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+    </Grid>
+</UserControl>

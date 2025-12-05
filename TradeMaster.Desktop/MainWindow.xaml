@@ -94,27 +94,33 @@
                     <Button Content="📊 Dashboard" 
                             Style="{StaticResource MenuButton}"
                             Background="#95a5a6"
-                            Click="DashboardButton_Click"/>
+                            Click="DashboardButton_Click"
+                            ToolTip="View dashboard and overview"/>
 
                     <Button Content="📦 Product Management" 
                             Style="{StaticResource MenuButton}"
-                            Click="ProductManagementButton_Click"/>
+                            Click="ProductManagementButton_Click"
+                            ToolTip="Manage products and inventory (Ctrl+P)"/>
 
                     <Button Content="💰 Point of Sale" 
                             Style="{StaticResource MenuButton}"
-                            Click="PosButton_Click"/>
+                            Click="PosButton_Click"
+                            ToolTip="Process sales transactions (Ctrl+O)"/>
 
                     <Button Content="👥 Customer Management" 
                             Style="{StaticResource MenuButton}"
-                            Click="CustomerManagementButton_Click"/>
+                            Click="CustomerManagementButton_Click"
+                            ToolTip="Manage customer information (Ctrl+C)"/>
 
                     <Button Content="📈 Sales Reports" 
                             Style="{StaticResource MenuButton}"
-                            Click="SalesReportsButton_Click"/>
+                            Click="SalesReportsButton_Click"
+                            ToolTip="View sales reports and analytics (Ctrl+R)"/>
 
                     <Button Content="⚙️ Settings" 
                             Style="{StaticResource MenuButton}"
-                            Click="SettingsButton_Click"/>
+                            Click="SettingsButton_Click"
+                            ToolTip="Configure application settings (Ctrl+T)"/>
 
                     <Separator Background="#7f8c8d" Margin="0,20"/>
 

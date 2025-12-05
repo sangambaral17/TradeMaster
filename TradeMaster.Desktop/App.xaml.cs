@@ -16,6 +16,11 @@ namespace TradeMaster.Desktop
 
         public App()
         {
+            // Global exception handlers
+            AppDomain.CurrentDomain.UnhandledException += OnUnhandledException;
+            DispatcherUnhandledException += OnDispatcherUnhandledException;
+            TaskScheduler.UnobservedTaskException += OnUnobservedTaskException;
+
             AppHost = Host.CreateDefaultBuilder()
                 .ConfigureServices((hostContext, services) =>
                 {
@@ -61,28 +66,90 @@ namespace TradeMaster.Desktop
                 .Build();
         }
 
+
         protected override async void OnStartup(StartupEventArgs e)
         {
-            await AppHost!.StartAsync();
-
-            // Initialize Database
-            using (var scope = AppHost.Services.CreateScope())
+            try
             {
-                var context = scope.ServiceProvider.GetRequiredService<TradeMasterDbContext>();
-                DbInitializer.Initialize(context);
+                ErrorLogger.LogInfo("Application starting...");
+
+                await AppHost!.StartAsync();
+
+                // Initialize Database
+                using (var scope = AppHost.Services.CreateScope())
+                {
+                    var context = scope.ServiceProvider.GetRequiredService<TradeMasterDbContext>();
+                    DbInitializer.Initialize(context);
+                }
+
+                ErrorLogger.LogInfo("Database initialized successfully");
+
+                // Show Main Window
+                var startupForm = AppHost.Services.GetRequiredService<MainWindow>();
+                startupForm.Show();
+
+                ErrorLogger.LogInfo("Application started successfully");
+
+                base.OnStartup(e);
             }
+            catch (Exception ex)
+            {
+                ErrorLogger.LogError("Critical error during application startup", ex);
+                
+                MessageBox.Show(
+                    $"Failed to start Walsong TradeMaster.\n\n" +
+                    $"Error: {ex.Message}\n\n" +
+                    $"Please check the log file for details or contact support.",
+                    "Startup Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
 
-            // Show Main Window
-            var startupForm = AppHost.Services.GetRequiredService<MainWindow>();
-            startupForm.Show();
-
-            base.OnStartup(e);
+                Shutdown(1);
+            }
         }
+
 
         protected override async void OnExit(ExitEventArgs e)
         {
+            ErrorLogger.LogInfo("Application shutting down...");
             await AppHost!.StopAsync();
             base.OnExit(e);
+        }
+
+        private void OnUnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            var exception = e.ExceptionObject as Exception;
+            ErrorLogger.LogError("Unhandled exception", exception, "AppDomain.UnhandledException");
+
+            if (e.IsTerminating)
+            {
+                MessageBox.Show(
+                    "A critical error occurred and the application must close.\n\n" +
+                    "Error details have been logged. Please contact support.",
+                    "Critical Error",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+            }
+        }
+
+        private void OnDispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            ErrorLogger.LogError("Dispatcher unhandled exception", e.Exception, "Dispatcher");
+
+            MessageBox.Show(
+                $"An unexpected error occurred:\n\n{e.Exception.Message}\n\n" +
+                "The application will attempt to continue. If problems persist, please restart.",
+                "Error",
+                MessageBoxButton.OK,
+                MessageBoxImage.Warning);
+
+            e.Handled = true; // Prevent application crash
+        }
+
+        private void OnUnobservedTaskException(object? sender, UnobservedTaskExceptionEventArgs e)
+        {
+            ErrorLogger.LogError("Unobserved task exception", e.Exception, "TaskScheduler");
+            e.SetObserved(); // Prevent application crash
         }
     }
 }

@@ -1,8 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
+using System.Windows.Input;
 using TradeMaster.Core.Entities;
 using TradeMaster.Core.Interfaces;
 using TradeMaster.Desktop.Views;
+using TradeMaster.Desktop.Services;
 
 namespace TradeMaster.Desktop
 {
@@ -17,19 +19,28 @@ namespace TradeMaster.Desktop
             _productRepository = productRepository;
             _serviceProvider = serviceProvider;
             Loaded += MainWindow_Loaded;
+            
+            // Register keyboard shortcuts
+            RegisterKeyboardShortcuts();
         }
 
         private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {
-                StatusText.Text = "✅ Connected";
+                StatusText.Text = "⏳ Loading...";
+                ProductCountText.Text = "...";
                 
                 var products = await _productRepository.GetAllAsync();
                 ProductCountText.Text = products.Count().ToString();
+                StatusText.Text = "✅ Connected";
+                
+                ErrorLogger.LogInfo("MainWindow loaded successfully");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                ErrorLogger.LogError("Error loading MainWindow stats", ex);
+                
                 StatusText.Text = $"❌ Error";
                 StatusText.Foreground = new System.Windows.Media.SolidColorBrush(
                     (System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#e74c3c"));
@@ -37,11 +48,48 @@ namespace TradeMaster.Desktop
             }
         }
 
+        private void RegisterKeyboardShortcuts()
+        {
+            // Ctrl+P - Product Management
+            var productShortcut = new KeyBinding(
+                new RelayCommand(_ => ProductManagementButton_Click(this, new RoutedEventArgs())),
+                Key.P,
+                ModifierKeys.Control);
+            InputBindings.Add(productShortcut);
+
+            // Ctrl+O - Point of Sale (O for Order)
+            var posShortcut = new KeyBinding(
+                new RelayCommand(_ => PosButton_Click(this, new RoutedEventArgs())),
+                Key.O,
+                ModifierKeys.Control);
+            InputBindings.Add(posShortcut);
+
+            // Ctrl+C - Customer Management
+            var customerShortcut = new KeyBinding(
+                new RelayCommand(_ => CustomerManagementButton_Click(this, new RoutedEventArgs())),
+                Key.C,
+                ModifierKeys.Control);
+            InputBindings.Add(customerShortcut);
+
+            // Ctrl+R - Reports
+            var reportsShortcut = new KeyBinding(
+                new RelayCommand(_ => SalesReportsButton_Click(this, new RoutedEventArgs())),
+                Key.R,
+                ModifierKeys.Control);
+            InputBindings.Add(reportsShortcut);
+
+            // Ctrl+T - Settings (T for Tools)
+            var settingsShortcut = new KeyBinding(
+                new RelayCommand(_ => SettingsButton_Click(this, new RoutedEventArgs())),
+                Key.T,
+                ModifierKeys.Control);
+            InputBindings.Add(settingsShortcut);
+        }
+
         private void DashboardButton_Click(object sender, RoutedEventArgs e)
         {
-            // Already on dashboard - could refresh stats here
-            MessageBox.Show("You are already on the Dashboard!", "Info", 
-                MessageBoxButton.OK, MessageBoxImage.Information);
+            // Already on dashboard - refresh stats
+            RefreshStats();
         }
 
         private void ProductManagementButton_Click(object sender, RoutedEventArgs e)
@@ -66,12 +114,16 @@ namespace TradeMaster.Desktop
         {
             try
             {
+                StatusText.Text = "⏳ Refreshing...";
                 var products = await _productRepository.GetAllAsync();
                 ProductCountText.Text = products.Count().ToString();
+                StatusText.Text = "✅ Connected";
             }
-            catch
+            catch (Exception ex)
             {
-                // Ignore errors during refresh
+                ErrorLogger.LogError("Error refreshing stats", ex);
+                ProductCountText.Text = "N/A";
+                StatusText.Text = "❌ Error";
             }
         }
 
@@ -92,5 +144,28 @@ namespace TradeMaster.Desktop
             var settingsView = _serviceProvider.GetRequiredService<SettingsView>();
             settingsView.ShowDialog();
         }
+    }
+
+    // Helper class for keyboard shortcuts
+    public class RelayCommand : ICommand
+    {
+        private readonly Action<object?> _execute;
+        private readonly Func<object?, bool>? _canExecute;
+
+        public RelayCommand(Action<object?> execute, Func<object?, bool>? canExecute = null)
+        {
+            _execute = execute ?? throw new ArgumentNullException(nameof(execute));
+            _canExecute = canExecute;
+        }
+
+        public event EventHandler? CanExecuteChanged
+        {
+            add => CommandManager.RequerySuggested += value;
+            remove => CommandManager.RequerySuggested -= value;
+        }
+
+        public bool CanExecute(object? parameter) => _canExecute == null || _canExecute(parameter);
+
+        public void Execute(object? parameter) => _execute(parameter);
     }
 }
