@@ -1,6 +1,8 @@
 using System.Windows;
+using System.Windows.Media;
 using TradeMaster.Core.Entities;
 using TradeMaster.Core.Interfaces;
+using TradeMaster.Desktop.Services;
 
 namespace TradeMaster.Desktop.Views
 {
@@ -39,6 +41,11 @@ namespace TradeMaster.Desktop.Views
                 HeaderText.Text = "✏️ Edit Product";
                 LoadProductData(existingProduct);
             }
+            
+            // Attach real-time validation handlers
+            NameTextBox.TextChanged += NameTextBox_TextChanged;
+            PriceTextBox.TextChanged += PriceTextBox_TextChanged;
+            StockTextBox.TextChanged += StockTextBox_TextChanged;
         }
 
         private void LoadProductData(Product product)
@@ -162,6 +169,49 @@ namespace TradeMaster.Desktop.Views
         {
             ValidationText.Text = message;
             ValidationBorder.Visibility = Visibility.Visible;
+        }
+        
+        // Real-time validation event handlers
+        private void NameTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(NameTextBox.Text))
+            {
+                NameTextBox.BorderBrush = new SolidColorBrush(Color.FromRgb(231, 76, 60)); // Red
+                NameTextBox.BorderThickness = new Thickness(2);
+            }
+            else
+            {
+                NameTextBox.BorderBrush = new SolidColorBrush(Color.FromRgb(189, 195, 199)); // Normal
+                NameTextBox.BorderThickness = new Thickness(1);
+            }
+        }
+        
+        private void PriceTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            if (!decimal.TryParse(PriceTextBox.Text, out decimal price) || price < 0)
+            {
+                PriceTextBox.BorderBrush = new SolidColorBrush(Color.FromRgb(231, 76, 60)); // Red
+                PriceTextBox.BorderThickness = new Thickness(2);
+            }
+            else
+            {
+                PriceTextBox.BorderBrush = new SolidColorBrush(Color.FromRgb(189, 195, 199)); // Normal
+                PriceTextBox.BorderThickness = new Thickness(1);
+            }
+        }
+        
+        private void StockTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            if (!int.TryParse(StockTextBox.Text, out int stock) || stock < 0)
+            {
+                StockTextBox.BorderBrush = new SolidColorBrush(Color.FromRgb(231, 76, 60)); // Red
+                StockTextBox.BorderThickness = new Thickness(2);
+            }
+            else
+            {
+                StockTextBox.BorderBrush = new SolidColorBrush(Color.FromRgb(189, 195, 199)); // Normal
+                StockTextBox.BorderThickness = new Thickness(1);
+            }
         }
 
         private void CancelButton_Click(object sender, RoutedEventArgs e)
