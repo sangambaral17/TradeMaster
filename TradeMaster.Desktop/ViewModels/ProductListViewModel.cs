@@ -250,8 +250,11 @@ namespace TradeMaster.Desktop.ViewModels
         {
             if (SelectedProduct == null) return;
 
+            // Store product name before deletion
+            var productName = SelectedProduct.Name;
+
             var result = MessageBox.Show(
-                $"Are you sure you want to delete '{SelectedProduct.Name}'?\n\nThis action cannot be undone.",
+                $"Are you sure you want to delete '{productName}'?\n\nThis action cannot be undone.",
                 "Confirm Delete",
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Warning);
@@ -261,9 +264,12 @@ namespace TradeMaster.Desktop.ViewModels
                 try
                 {
                     await _productRepository.DeleteAsync(SelectedProduct);
-                    await LoadProducts(); // Reload products
                     
-                    ErrorLogger.LogInfo($"Product deleted: {SelectedProduct.Name}");
+                    ErrorLogger.LogInfo($"Product deleted: {productName}");
+                    
+                    // Reload products after successful deletion
+                    await LoadProducts();
+                    
                     MessageBox.Show("Product deleted successfully!", 
                         "Success", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
