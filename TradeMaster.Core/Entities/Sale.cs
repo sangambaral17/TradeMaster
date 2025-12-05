@@ -18,6 +18,10 @@ namespace TradeMaster.Core.Entities
         public int? CustomerId { get; set; }
         public Customer? Customer { get; set; }
 
+        // Payment method: Cash, Card, UPI, eSewa
+        [MaxLength(50)]
+        public string PaymentMethod { get; set; } = "Cash";
+
         // Navigation property
         public ICollection<SaleItem> Items { get; set; } = new List<SaleItem>();
     }

@@ -10,5 +10,13 @@ namespace TradeMaster.Desktop.Views
             InitializeComponent();
             DataContext = viewModel;
         }
+
+        private void PaymentMethod_Checked(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (sender is System.Windows.Controls.RadioButton rb && DataContext is PosViewModel vm)
+            {
+                vm.SelectedPaymentMethod = rb.Tag?.ToString() ?? "Cash";
+            }
+        }
     }
 }

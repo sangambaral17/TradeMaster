@@ -33,6 +33,9 @@ namespace TradeMaster.Desktop.ViewModels
         [ObservableProperty]
         private decimal _taxAmount;
 
+        [ObservableProperty]
+        private string _selectedPaymentMethod = "Cash";
+
         private const decimal TaxRate = 0.0m; // 0% tax for now
 
         public PosViewModel(
@@ -140,6 +143,7 @@ namespace TradeMaster.Desktop.ViewModels
                 {
                     SaleDate = DateTime.Now,
                     TotalAmount = TotalAmount,
+                    PaymentMethod = SelectedPaymentMethod,
                     // CustomerId will be added later when we integrate customer selection in POS
                 };
 
