@@ -3,12 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:converters="clr-namespace:TradeMaster.Desktop.Converters"
         mc:Ignorable="d"
         Title="Product Management" Height="650" Width="1100"
         WindowStartupLocation="CenterScreen"
         Background="#f5f6fa">
     
     <Window.Resources>
+        <!-- Converters -->
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisConverter"/>
+        <converters:NullToBoolConverter x:Key="NullToBoolConverter"/>
+        <converters:LowStockConverter x:Key="LowStockConverter"/>
+        <converters:EmptyStringToVisibilityConverter x:Key="EmptyStringToVisibilityConverter"/>
+        <converters:PageGreaterThan1Converter x:Key="PageGreaterThan1Converter"/>
+        
         <!-- Modern Button Style -->
         <Style x:Key="ModernButton" TargetType="Button">
             <Setter Property="Background" Value="#3498db"/>
@@ -265,7 +273,6 @@
                     <Button Content="◀ Previous" 
                             Style="{StaticResource ModernButton}"
                             Command="{Binding PreviousPageCommand}"
-                            IsEnabled="{Binding CurrentPage, Converter={StaticResource PageGreaterThan1Converter}}"
                             Padding="10,5"
                             Margin="0,0,10,0"/>
                     <TextBlock Text="{Binding CurrentPage, StringFormat='Page {0}'}" 
@@ -282,7 +289,6 @@
                     <Button Content="Next ▶" 
                             Style="{StaticResource ModernButton}"
                             Command="{Binding NextPageCommand}"
-                            IsEnabled="{Binding CurrentPage, Converter={StaticResource PageLessThanTotalConverter}}"
                             Padding="10,5"/>
                 </StackPanel>
                 
