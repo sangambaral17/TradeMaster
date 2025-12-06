@@ -1,0 +1,49 @@
+<svg id="logo" width="600" height="150" viewBox="0 0 600 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1"/>
+                        <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1"/>
+                        <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1"/>
+                    </linearGradient>
+                    
+                    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1"/>
+                        <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1"/>
+                    </linearGradient>
+                    
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                
+                <!-- Logo Icon -->
+                <g transform="translate(30, 35)">
+                    <!-- Outer hexagon -->
+                    <path d="M 40 0 L 80 20 L 80 60 L 40 80 L 0 60 L 0 20 Z" fill="none" stroke="url(#logoGradient)" stroke-width="2" opacity="0.3"/>
+                    
+                    <!-- Stylized W -->
+                    <path d="M 15 25 L 25 55 L 35 35 L 45 55 L 55 35 L 65 55 L 65 25" fill="none" stroke="url(#logoGradient)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+                    
+                    <!-- Accent dots -->
+                    <circle cx="40" cy="40" r="3" fill="#3b82f6" opacity="0.8"/>
+                    <circle cx="35" cy="35" r="2" fill="#8b5cf6" opacity="0.6"/>
+                    <circle cx="45" cy="35" r="2" fill="#06b6d4" opacity="0.6"/>
+                </g>
+                
+                <!-- Text: WALSONG -->
+                <text x="140" y="88" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="54" font-weight="800" letter-spacing="-1" fill="url(#textGradient)" filter="url(#glow)">
+                    WALSONG
+                </text>
+                
+                <!-- Tagline -->
+                <text x="142" y="115" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="12" font-weight="400" letter-spacing="0.5" fill="#94a3b8">
+                    Business Software • Trading Systems • Desktop &amp; Web Solutions
+                </text>
+                
+                <!-- Accent line -->
+                <line x1="140" y1="100" x2="240" y2="100" stroke="url(#logoGradient)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            </svg>
