@@ -1,4 +1,4 @@
-# TradeMaster v1.0.0-qa Release Notes
+# Walsong TradeMaster v1.0.0-qa Release Notes
 
 **Release Date:** December 5, 2025  
 **Release Type:** QA Testing Build  
@@ -9,7 +9,7 @@
 
 ## 🎯 Release Overview
 
-This is the first QA release of TradeMaster, containing all Phase 1 and Phase 2 features. The application is ready for comprehensive testing before production deployment.
+This is the first QA release of Walsong TradeMaster, containing all Phase 1 and Phase 2 features. The application is ready for comprehensive testing before production deployment.
 
 ---
 

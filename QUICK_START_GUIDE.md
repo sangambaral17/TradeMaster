@@ -1,4 +1,4 @@
-# TradeMaster® - Quick Start Guide
+# Walsong TradeMaster® - Quick Start Guide
 ## For Customers & End Users
 
 **Version 1.0**  
@@ -6,15 +6,15 @@
 
 ---
 
-## Welcome to TradeMaster! 🎉
+## Welcome to Walsong TradeMaster! 🎉
 
-Thank you for choosing TradeMaster®, your complete inventory and sales management solution. This guide will help you get started in just **15 minutes**.
+Thank you for choosing Walsong TradeMaster®, your complete inventory and sales management solution. This guide will help you get started in just **15 minutes**.
 
 ---
 
 ## 📦 What's Included
 
-- **TradeMaster Desktop Application** - The main program
+- **Walsong TradeMaster Desktop Application** - The main program
 - **User Guide (PDF)** - Complete reference manual
 - **Sample Data** - Pre-loaded products to explore
 - **Email Support** - help@walsongcontents.com
@@ -33,10 +33,10 @@ Thank you for choosing TradeMaster®, your complete inventory and sales manageme
 2. Click "Next" through the installation wizard
 3. Choose installation folder (or use default)
 4. Click "Install"
-5. Launch TradeMaster when complete
+5. Launch Walsong TradeMaster when complete
 
 ### Step 3: First Launch
-When you first open TradeMaster:
+When you first open Walsong TradeMaster:
 - The database will be automatically created
 - Sample products will be loaded
 - You're ready to go!
@@ -46,7 +46,7 @@ When you first open TradeMaster:
 ## ⚡ Quick Tour (10 minutes)
 
 ### 🏠 Dashboard
-When you open TradeMaster, you see the **Dashboard**:
+When you open Walsong TradeMaster, you see the **Dashboard**:
 - **Quick Stats**: Total products, system status
 - **Module Cards**: Click to access different features
 - **Navigation Sidebar**: Menu on the left
@@ -184,7 +184,7 @@ When you open TradeMaster, you see the **Dashboard**:
 ### Application won't start
 **Solutions**:
 1. Restart your computer
-2. Reinstall TradeMaster
+2. Reinstall Walsong TradeMaster
 3. Check Windows Event Viewer for errors
 4. Contact support: support@walsongcontents.com
 
@@ -204,7 +204,7 @@ When you open TradeMaster, you see the **Dashboard**:
 
 ### User Manual
 Complete PDF guide included with installation:
-- `C:\Program Files\TradeMaster\User Manual.pdf`
+- `C:\Program Files\Walsong TradeMaster\User Manual.pdf`
 
 ### Keyboard Shortcuts
 - `Ctrl + P`: Go to Products
@@ -230,7 +230,7 @@ Searchable articles and FAQs
 ### Before Contacting Support
 
 Please have ready:
-- TradeMaster version number (see About screen)
+- Walsong TradeMaster version number (see About screen)
 - Windows version
 - Description of the issue
 - Steps to reproduce the problem
@@ -269,7 +269,7 @@ Now that you're set up:
 **Permitted**: Commercial use within your organization  
 **Prohibited**: Reselling, reverse engineering, redistribution  
 
-Full license agreement: [LICENSE.txt](./LICENSE.txt)
+Full license agreement: [LICENSE](./LICENSE)
 
 ---
 
@@ -281,11 +281,11 @@ We'd love to hear from you!
 **Bug Reports**: bugs@walsongcontents.com  
 **General Feedback**: feedback@walsongcontents.com
 
-Your input helps us make TradeMaster better for everyone!
+Your input helps us make Walsong TradeMaster better for everyone!
 
 ---
 
-**Thank you for choosing TradeMaster®!**
+**Thank you for choosing Walsong TradeMaster®!**
 
 *Happy Selling! 🎉*
 

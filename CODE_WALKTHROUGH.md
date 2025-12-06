@@ -1,4 +1,4 @@
-# TradeMaster - Complete Code Walkthrough & Architecture Guide
+# Walsong TradeMaster - Complete Code Walkthrough & Architecture Guide
 
 ## Table of Contents
 1. [Application Overview](#application-overview)
@@ -15,7 +15,7 @@
 
 ## Application Overview
 
-**TradeMaster** is an enterprise-level inventory and sales management system built with:
+**Walsong TradeMaster** is an enterprise-level inventory and sales management system built with:
 - **Frontend**: WPF (Windows Presentation Foundation) with MVVM pattern
 - **Backend**: .NET 9.0 with Entity Framework Core
 - **Database**: SQLite (lightweight, file-based)

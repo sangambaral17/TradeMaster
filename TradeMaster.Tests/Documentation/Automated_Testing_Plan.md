@@ -1,7 +1,7 @@
 # Automated Testing Implementation Plan
 
 ## 🎯 Goal
-Create comprehensive automated testing for TradeMaster with both integration tests and UI automation.
+Create comprehensive automated testing for Walsong TradeMaster with both integration tests and UI automation.
 
 ---
 

@@ -7,19 +7,6 @@
 
 ---
 
-## 🎯 The Opportunity
-
-**Nepal's retail market is rapidly digitizing**, but existing inventory management solutions are either too expensive (cloud-based SaaS charging in USD) or too unreliable (spreadsheets and free tools). With **300,000+ small retail businesses** across Nepal and growing consumer demand, there's a significant opportunity for affordable, professional desktop software that understands local business needs.
-
-## 💡 The Solution
-
-**Walsong TradeMaster®** is a modern, Windows-based inventory and sales management system **specifically designed for Nepal's retail market**. With **NPR currency support**, **offline-first architecture**, and **affordable one-time pricing**, Walsong TradeMaster provides:
-
-- Complete inventory tracking with NPR pricing
-- Point-of-sale (POS) system optimized for Nepali businesses
-- Customer management
-- Sales analytics and reporting in NPR
-- VAT-ready tax management (13% for Nepal)
 - Future: Nepali language interface
 
 ## 📊 Market Position

@@ -44,13 +44,59 @@ git push origin develop       # Push to GitHub
 git checkout develop
 git status                    # Ensure everything is committed
 
+# 🌿 Git Branch Workflow Guide
+
+## Current Branch Structure
+
+```
+main (production - v1.0.0 released)
+  └── develop (development branch - work here)
+```
+
+---
+
+## 📋 Branch Strategy
+
+### **main** branch
+- **Purpose**: Production-ready code only
+- **Protection**: Only merge tested, stable code
+- **Releases**: All releases are tagged from main (v1.0.0, v1.1.0, etc.)
+- **Rule**: Never commit directly to main
+
+### **develop** branch ✅ **YOU ARE HERE**
+- **Purpose**: Active development
+- **Usage**: All new features and fixes go here first
+- **Testing**: Test thoroughly before merging to main
+- **Rule**: This is your working branch
+
+---
+
+## 🔄 Workflow
+
+### Daily Development (Current Setup)
+
+```bash
+# You're already on develop branch
+git status                    # Check what changed
+git add .                     # Stage changes
+git commit -m "description"   # Commit changes
+git push origin develop       # Push to GitHub
+```
+
+### When Ready for Release
+
+```bash
+# 1. Make sure develop is stable and tested
+git checkout develop
+git status                    # Ensure everything is committed
+
 # 2. Merge develop into main
 git checkout main
 git pull origin main          # Get latest main
 git merge develop             # Merge develop into main
 
 # 3. Tag the release
-git tag -a v1.1.0 -m "Release version 1.1.0"
+git tag -a v1.1.0 -m "Walsong TradeMaster v1.0.0 - Enterprise Inventory & Sales Management 1.1.0"
 
 # 4. Push everything
 git push origin main
@@ -99,6 +145,7 @@ git log --oneline --graph --all       # Visual branch history
 - ✅ You're currently on **develop**
 - ✅ **develop** pushed to GitHub
 - ✅ **main** is protected with v1.0.0 release
+- ✅ Users can download and install Walsong TradeMaster!
 
 ---
 

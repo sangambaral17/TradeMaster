@@ -1,8 +1,8 @@
-# 📚 TradeMaster Developer Documentation
+# 📚 Walsong TradeMaster Developer Documentation
 
 ## 🎯 Quick Start for Developers
 
-Welcome to TradeMaster! This guide will help you understand and work with the codebase.
+Welcome to Walsong TradeMaster! This guide will help you understand and work with the codebase.
 
 ---
 

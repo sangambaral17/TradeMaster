@@ -1,4 +1,4 @@
-# TradeMaster v1.0.0-qa - QA Test Checklist
+# Walsong TradeMaster v1.0.0-qa - QA Test Checklist
 
 **Release Date:** December 5, 2025  
 **Build:** v1.0.0-qa  

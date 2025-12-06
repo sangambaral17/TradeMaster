@@ -23,7 +23,7 @@ d:\AntigravityProjects\C# Projects\TradeMaster\PublishedApp\
 1. Click **"New Project"** button (big button in center)
 2. In the left panel, select **"Installer"** → **"Simple"**
 3. Click **"Create Project"** button at bottom
-4. Save the project file as `TradeMaster.aip` in your project folder
+4. Save the project file as `WalsongTradeMaster.aip` in your project folder
 
 ---
 
@@ -32,7 +32,7 @@ d:\AntigravityProjects\C# Projects\TradeMaster\PublishedApp\
 You'll see the main window with tabs at the top. You're on **"Product Details"** tab.
 
 Fill in:
-- **Product Name**: `TradeMaster`
+- **Product Name**: `Walsong TradeMaster`
 - **Product Version**: `1.0.0`
 - **Company**: `Walsong Nepal`
 
@@ -52,7 +52,7 @@ This is where you add your application files.
 
 **A. Select Application Folder**
 1. In the left tree, click on **"Application Folder"**
-   - This represents `C:\Program Files\TradeMaster` on user's PC
+   - This represents `C:\Program Files\Walsong TradeMaster` on user's PC
 
 **B. Add Your Files**
 1. Look at the toolbar at the top
@@ -130,7 +130,7 @@ Now you're ready to create the installer!
 #### What You Get:
 
 After build completes, you'll have:
-- **TradeMaster.msi** - The installer file
+- **WalsongTradeMaster.msi** - The installer file
 - This is what you distribute to users!
 
 ✅ **Installer is BUILT!**
@@ -139,26 +139,12 @@ After build completes, you'll have:
 
 ### **STEP 8: Test the Installer**
 
-1. Find the `TradeMaster.msi` file you just created
+1. Find the `WalsongTradeMaster.msi` file you just created
 2. **Double-click** it to run
 3. Follow the installation wizard:
    - Click "Next"
-   - Choose install location (default is fine)
-   - Click "Install"
-   - Wait for installation
-   - Click "Finish"
-
-4. **Verify Installation**:
-   - Check Desktop - you should see TradeMaster icon
-   - Check Start Menu - you should see TradeMaster
-   - Double-click the icon - application should launch!
-
----
-
-## 🎉 You're Done!
-
 You now have a working installer that:
-- ✅ Installs TradeMaster to Program Files
+- ✅ Installs Walsong TradeMaster to Program Files
 - ✅ Creates Desktop shortcut
 - ✅ Creates Start Menu shortcut
 - ✅ Includes all files (database, settings, DLLs)
@@ -171,7 +157,7 @@ You now have a working installer that:
 ```
 Advanced Installer Project Structure:
 
-Application Folder (C:\Program Files\TradeMaster\)
+Application Folder (C:\Program Files\Walsong TradeMaster\)
 ├── TradeMaster.Desktop.exe  ← Main app
 ├── trademaster.db           ← Database
 ├── appsettings.json         ← Settings
@@ -180,7 +166,7 @@ Application Folder (C:\Program Files\TradeMaster\)
 Desktop
 └── TradeMaster.lnk          ← Shortcut
 
-Start Menu → Programs → TradeMaster
+Start Menu → Programs → Walsong TradeMaster
 └── TradeMaster.lnk          ← Shortcut
 ```
 

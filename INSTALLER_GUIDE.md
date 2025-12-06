@@ -25,13 +25,13 @@ The application has been published to `PublishedApp/` folder with the following 
 ## Step 4: Configure Product Details
 
 ### Product Information Tab
-- **Product Name**: `TradeMaster - Enterprise Inventory & Sales Management`
+- **Product Name**: `Walsong TradeMaster - Enterprise Inventory & Sales Management`
 - **Product Version**: `1.0.0`
 - **Company**: `Walsong Nepal`
 - **Website**: Your company website
 
 ### Application Details
-- **Application Name**: `TradeMaster`
+- **Application Name**: `Walsong TradeMaster`
 - **Application Version**: `1.0.0`
 - **Publisher**: `Walsong Nepal`
 
@@ -48,7 +48,7 @@ The application has been published to `PublishedApp/` folder with the following 
 5. Click **"Open"** to add them
 
 **Important**: Set installation folder to:
-- Default: `[ProgramFilesFolder]\TradeMaster`
+- Default: `[ProgramFilesFolder]\Walsong TradeMaster`
 
 ## Step 6: Configure Shortcuts
 
@@ -81,7 +81,7 @@ The application has been published to `PublishedApp/` folder with the following 
 1. Go to **"Install Parameters"** section
 2. Set:
    - **Installation Type**: Per-machine (all users) or Per-user
-   - **Installation Folder**: `[ProgramFilesFolder]\TradeMaster`
+   - **Installation Folder**: `[ProgramFilesFolder]\Walsong TradeMaster`
    - **Create uninstaller**: ✅ Checked
 
 ### Prerequisites (Optional)
@@ -195,10 +195,10 @@ Make sure these files are in your installer:
 ## 📝 Sample Advanced Installer Configuration
 
 ```
-Product Name: TradeMaster
+Product Name: Walsong TradeMaster
 Version: 1.0.0
 Publisher: Walsong Nepal
-Install Location: C:\Program Files\TradeMaster
+Install Location: C:\Program Files\Walsong TradeMaster
 Shortcuts:
   - Desktop: TradeMaster.lnk → TradeMaster.Desktop.exe
   - Start Menu: TradeMaster.lnk → TradeMaster.Desktop.exe
@@ -230,7 +230,7 @@ Files:
 ## 🎉 You're Done!
 
 After following these steps, you'll have a professional installer that:
-- ✅ Installs TradeMaster on any Windows PC
+- ✅ Installs Walsong TradeMaster on any Windows PC
 - ✅ Creates desktop and start menu shortcuts
 - ✅ Includes all dependencies (no .NET installation needed)
 - ✅ Can be uninstalled cleanly

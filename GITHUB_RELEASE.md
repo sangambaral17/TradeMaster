@@ -18,14 +18,14 @@
 
 ### 3️⃣ **Add Title**
 ```
-TradeMaster v1.0.0 - Enterprise Inventory & Sales Management
+Walsong TradeMaster v1.0.0 - Enterprise Inventory & Sales Management
 ```
 
 ### 4️⃣ **Add Description**
 Copy this:
 
 ```
-# TradeMaster v1.0.0 - First Release
+# Walsong TradeMaster v1.0.0 - First Release
 
 Enterprise inventory and sales management system.
 
@@ -37,7 +37,7 @@ Enterprise inventory and sales management system.
 ✅ Multi-language (English, Nepali)
 
 ## Installation
-1. Download TradeMaster-Setup-v1.0.0.msi
+1. Download WalsongTradeMaster-Setup-v1.0.0.msi
 2. Run installer
 3. Launch from Desktop
 
@@ -51,7 +51,7 @@ Enterprise inventory and sales management system.
 ### 5️⃣ **Upload Installer**
 - Scroll to "Attach binaries"
 - Click or drag your `.msi` file
-- Rename to: `TradeMaster-Setup-v1.0.0.msi`
+- Rename to: `WalsongTradeMaster-Setup-v1.0.0.msi`
 - Check ✅ "Set as the latest release"
 - Click **"Publish release"**
 
@@ -64,7 +64,7 @@ Your installer is now available at:
 https://github.com/sangambaral17/TradeMaster/releases
 ```
 
-Users can download and install TradeMaster!
+Users can download and install Walsong TradeMaster!
 
 ---
 

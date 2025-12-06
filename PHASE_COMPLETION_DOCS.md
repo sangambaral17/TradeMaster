@@ -1,9 +1,9 @@
-# TradeMaster - Completed Phases Documentation
+# Walsong TradeMaster - Completed Phases Documentation
 
 **Date:** December 4, 2025
 **Version:** 1.0.0 (Release Candidate)
 
-This document details the implementation of Phases 5 through 12, completing the core feature set of the TradeMaster Enterprise System.
+This document details the implementation of Phases 5 through 12, completing the core feature set of the Walsong TradeMaster Enterprise System.
 
 ---
 
