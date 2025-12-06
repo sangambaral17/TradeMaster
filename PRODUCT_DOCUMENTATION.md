@@ -1,4 +1,4 @@
-# TradeMaster® Enterprise Edition
+# Walsong TradeMaster® Enterprise Edition
 ## Comprehensive Inventory & Sales Management System
 
 **Version:** 1.0.0  
@@ -26,7 +26,7 @@
 
 ## Executive Summary
 
-**TradeMaster® Enterprise Edition** is a cutting-edge, desktop-based inventory and sales management system designed specifically for small to medium-sized retail businesses. Built with modern .NET technology and leveraging enterprise-grade architectural patterns, TradeMaster delivers the power of enterprise software at an affordable price point.
+**Walsong TradeMaster® Enterprise Edition** is a cutting-edge, desktop-based inventory and sales management system designed specifically for small to medium-sized retail businesses. Built with modern .NET technology and leveraging enterprise-grade architectural patterns, Walsong TradeMaster delivers the power of enterprise software at an affordable price point.
 
 ### Key Value Propositions
 
@@ -34,235 +34,6 @@
 - **💰 Cost-Effective**: No monthly subscriptions, one-time license fee
 - **🔒 Data Security**: Your data stays on your premises, not in the cloud
 - **📊 Complete Solution**: Inventory, Sales, POS, and Reporting in one integrated system
-- **🎯 Easy to Use**: Intuitive interface designed for non-technical users
-
----
-
-## Product Overview
-
-### What is TradeMaster?
-
-TradeMaster is an enterprise-grade **Windows desktop application** that streamlines retail operations by providing integrated modules for:
-
-1. **Inventory Management** - Track products, stock levels, and categories
-2. **Point of Sale (POS)** - Process sales transactions quickly and efficiently
-3. **Customer Management** - Maintain customer records and purchase history
-4. **Sales Analytics** - Generate comprehensive reports and insights
-5. **Configuration & Settings** - Customize the system to your business needs
-
-### Who is it for?
-
-- **Retail Stores**: Electronics, clothing, grocery, hardware stores
-- **Wholesale Distributors**: Managing large inventories and B2B sales
-- **Small Businesses**: Shops needing professional inventory tracking
-- **Growing Enterprises**: Companies scaling from manual to automated systems
-
----
-
-## Core Features & Capabilities
-
-### 1. 📦 Advanced Inventory Management
-
-#### Product Management
-- **Comprehensive Product Catalog**: Store unlimited products with detailed information
-  - Product name, SKU, barcode support
-  - Pricing (cost price, selling price, profit margin tracking)
-  - Stock quantity with low-stock alerts
-  - Category classification
-  - Product images and descriptions
-  
-- **Category Hierarchy**: Organize products into logical categories
-- **Real-Time Stock Tracking**: Automatic inventory updates on each sale
-- **Low Stock Alerts**: Get notified when products need reordering
-- **Bulk Operations**: Add, edit, or update multiple products simultaneously
-
-#### Data Management
-- **Search & Filter**: Quickly find products by name, SKU, or category
-- **Barcode Integration**: Scan products directly into the system using any standard scanner
-- **Excel Import/Export**: Bulk import product catalogs (Future Enhancement)
-
----
-
-### 2. 💰 Point of Sale (POS) System
-
-#### Transaction Processing
-- **Fast Checkout**: Add products to cart with a single click or barcode scan
-- **Real-Time Calculations**: Automatic subtotal, tax, and total computation
-- **Flexible Pricing**: Support for discounts and promotions (Future Enhancement)
-- **Multiple Payment Methods**: Cash, card, and mixed payments (Future Enhancement)
-
-#### Customer Experience
-- **Clean Interface**: Distraction-free POS screen for fast transactions
-- **Product Search**: Find products quickly during checkout
-- **Shopping Cart**: Review items before completing sale
-- **Receipt Generation**: Print professional thermal receipts (80mm)
-
-#### Business Features
-- **Transaction History**: Complete audit trail of all sales
-- **Daily Sales Reports**: Track revenue by date
-- **Tax Management**: Configurable tax rates (VAT, GST)
-
----
-
-### 3. 👥 Customer Relationship Management
-
-- **Customer Database**: Store customer information (name, email, phone, address)
-- **Purchase History**: Track what each customer has bought
-- **Customer Insights**: Identify your best customers
-- **Loyalty Programs**: Support for points and rewards (Future Enhancement)
-
----
-
-### 4. 📊 Sales Analytics & Reporting
-
-#### Dashboard
-- **Real-Time Metrics**: 
-  - Today's sales and revenue
-  - Total products in inventory
-  - Low stock alerts
-  - Recent transactions
-  
-#### Advanced Reports
-- **Sales History**: Filter transactions by date range
-- **Revenue Analytics**: Track sales trends over time
-- **Product Performance**: Best-selling and slow-moving products
-- **Profit Margins**: Analyze profitability by product or category (Future Enhancement)
-
-#### Export Capabilities
-- **PDF Reports**: Professional formatted reports (Future Enhancement)
-- **Excel Exports**: Data analysis in spreadsheets (Future Enhancement)
-
----
-
-### 5. ⚙️ Configuration & Settings
-
-- **Company Information**: Customize with your business details
-- **Tax Configuration**: Set applicable tax rates for your region
-- **Currency Settings**: Support for multiple currencies (NPR/USD)
-- **User Management**: Multiple user accounts with role-based access (Admin/Cashier)
-- **Backup & Restore**: Protect your business data with local backups
-- **Localization**: Switch between English and Nepali languages
-
----
-
-## Technical Architecture
-
-### Technology Stack
-
-TradeMaster is built using cutting-edge Microsoft technologies:
-
-| Component | Technology | Benefits |
-|-----------|------------|----------|
-| **Framework** | .NET 9.0 | Latest features, optimal performance, long-term support |
-| **Language** | C# 12 | Type-safe, modern, industry-standard |
-| **UI Framework** | WPF (Windows Presentation Foundation) | Rich, responsive desktop interface |
-| **Architecture** | Clean Architecture | Maintainable, testable, scalable |
-| **Database** | SQLite / SQL Server | Lightweight local DB or enterprise-grade server |
-| **ORM** | Entity Framework Core | Type-safe data access, automatic migrations |
-| **Design Pattern** | MVVM (Model-View-ViewModel) | Separation of concerns, testability |
-| **Dependency Injection** | Microsoft.Extensions.DI | Loose coupling, easy testing |
-
-### System Architecture
-
-```
-┌─────────────────────────────────────────────────┐
-│         Presentation Layer (WPF)                │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐      │
-│  │  Views   │  │ViewModels│  │ Commands │      │
-│  └──────────┘  └──────────┘  └──────────┘      │
-└─────────────────────────────────────────────────┘
-                     ⬇️
-┌─────────────────────────────────────────────────┐
-│            Business Logic Layer                 │
-│  ┌──────────────────────────────────┐          │
-│  │   Core Domain Entities           │          │
-│  │   (Product, Sale, Customer)      │          │
-│  └──────────────────────────────────┘          │
-└─────────────────────────────────────────────────┘
-                     ⬇️
-┌─────────────────────────────────────────────────┐
-│          Data Access Layer                      │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐      │
-│  │Repository│  │ DbContext│  │Migrations│      │
-│  └──────────┘  └──────────┘  └──────────┘      │
-└─────────────────────────────────────────────────┘
-                     ⬇️
-┌─────────────────────────────────────────────────┐
-│            Database (SQLite/SQL Server)         │
-└─────────────────────────────────────────────────┘
-```
-
-### Key Architectural Principles
-
-1. **Clean Architecture**: Business logic independent of UI and database
-2. **SOLID Principles**: Well-designed, maintainable code
-3. **Repository Pattern**: Abstracted data access layer
-4. **Dependency Injection**: Loosely coupled components
-5. **Asynchronous Programming**: Responsive UI, non-blocking operations
-
----
-
-## Business Benefits
-
-### For Business Owners
-
-1. **💵 Reduce Costs**: 
-   - One-time purchase, no recurring fees
-   - Reduce inventory shrinkage with accurate tracking
-   - Minimize manual errors in pricing and stock
-
-2. **⏱️ Save Time**:
-   - Faster checkout process increases customer throughput
-   - Automated stock tracking eliminates manual counting
-   - Quick reports replace hours of spreadsheet work
-
-3. **📈 Increase Revenue**:
-   - Never lose sales due to stock-outs with alerts
-   - Identify best-selling products and optimize inventory
-   - Better customer service with purchase history
-
-4. **🔐 Data Security**:
-   - Your data stays on your computer, not in the cloud
-   - No internet required for daily operations
-   - Complete control over backups and security
-
-### For Employees
-
-- **Simple Interface**: Minimal training required
-- **Fast Operations**: Complete transactions in seconds
-- **Error Prevention**: System validates all inputs
-- **Helpful Feedback**: Clear error messages and confirmations
-
-### For IT Departments
-
-- **Easy Installation**: Simple setup process
-- **Minimal Maintenance**: Self-contained application
-- **Reliable**: Built on proven Microsoft technology
-- **Scalable**: Upgrade from SQLite to SQL Server as you grow
-
----
-
-## User Personas
-
-### Persona 1: Retail Store Manager (Primary User)
-**Name**: Sarah, 35, manages a mid-sized electronics store  
-**Needs**: Daily sales tracking, inventory oversight, staff management  
-**How TradeMaster Helps**: Real-time dashboard shows business health at a glance
-
-### Persona 2: Cashier/Sales Associate (POS User)
-**Name**: Mike, 22, part-time sales associate  
-**Needs**: Fast checkout, easy product lookup, minimal training  
-**How TradeMaster Helps**: Intuitive POS interface requires almost no training
-
-### Persona 3: Business Owner (Decision Maker)
-**Name**: David, 45, owns 3 retail stores  
-**Needs**: Accurate reporting, cost control, scalability  
-**How TradeMaster Helps**: One-time cost, works offline, comprehensive reports
-
----
-
-## Implementation & Deployment
-
 ### System Requirements
 
 #### Minimum Requirements
@@ -345,7 +116,7 @@ TradeMaster is built using cutting-edge Microsoft technologies:
 
 ### vs. Cloud-Based Solutions (e.g., Shopify POS, Square)
 
-| Feature | TradeMaster® | Cloud Solutions |
+| Feature | Walsong TradeMaster® | Cloud Solutions |
 |---------|--------------|-----------------|
 | **Pricing** | ✅ One-time purchase | ❌ Monthly subscription ($50-200/mo) |
 | **Internet Required** | ✅ Works offline | ❌ Requires internet |
@@ -356,7 +127,7 @@ TradeMaster is built using cutting-edge Microsoft technologies:
 
 ### vs. Legacy Desktop Software (e.g., QuickBooks POS)
 
-| Feature | TradeMaster® | Legacy Software |
+| Feature | Walsong TradeMaster® | Legacy Software |
 |---------|--------------|-----------------|
 | **Technology** | ✅ Modern .NET 9 | ❌ Outdated frameworks |
 | **UI/UX** | ✅ Modern, intuitive | ❌ Dated interface |
@@ -366,7 +137,7 @@ TradeMaster is built using cutting-edge Microsoft technologies:
 
 ### vs. Free Solutions (e.g., Excel, Open Source)
 
-| Feature | TradeMaster® | Free Solutions |
+| Feature | Walsong TradeMaster® | Free Solutions |
 |---------|--------------|----------------|
 | **Reliability** | ✅ Professional quality | ⚠️ Prone to errors |
 | **Support** | ✅ Dedicated help | ❌ Community forums only |
@@ -402,7 +173,7 @@ TradeMaster is built using cutting-edge Microsoft technologies:
 - **Software Code**: Protected under copyright law
 - **UI/UX Design**: Original interface designs are copyrighted
 - **Documentation**: All written materials are proprietary
-- **TradeMaster® Name**: Trademark registration in progress
+- **Walsong TradeMaster® Name**: Trademark registration in progress
 
 ### Licensing
 
@@ -420,7 +191,7 @@ TradeMaster is built using cutting-edge Microsoft technologies:
 **Sangam Baral**  
 *Software Engineer*
 
-Sangam Baral is the sole creator and owner of TradeMaster®. With extensive experience in enterprise software development and a passion for solving real-world business problems, Sangam designed TradeMaster to bridge the gap between expensive cloud solutions and unreliable free tools.
+Sangam Baral is the sole creator and owner of Walsong TradeMaster®. With extensive experience in enterprise software development and a passion for solving real-world business problems, Sangam designed Walsong TradeMaster to bridge the gap between expensive cloud solutions and unreliable free tools.
 
 **Contact**: sangambarallnw@gmail.com  
 **LinkedIn**: [linkedin.com/in/sangambaral17](https://www.linkedin.com/in/sangambaral17)  
@@ -506,4 +277,4 @@ Sangam Baral is the sole creator and owner of TradeMaster®. With extensive expe
 
 *This document is confidential and proprietary. Unauthorized distribution is prohibited.*
 
-**TradeMaster® - Transforming Retail, One Transaction at a Time**
+**Walsong TradeMaster® - Transforming Retail, One Transaction at a Time**

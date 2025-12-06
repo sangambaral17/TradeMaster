@@ -42,7 +42,7 @@
 
 1. **Download** the latest release
 2. **Run** `TradeMaster-Setup.exe`
-3. **Launch** TradeMaster from Start Menu
+3. **Launch** Walsong TradeMaster from Start Menu
 4. **Explore** with pre-loaded sample data
 
 For detailed instructions, see [QUICK_START_GUIDE.md](./QUICK_START_GUIDE.md)
@@ -61,7 +61,7 @@ For detailed instructions, see [QUICK_START_GUIDE.md](./QUICK_START_GUIDE.md)
 
 ## 🏗️ Technical Architecture
 
-TradeMaster follows **Clean Architecture** principles with clear separation of concerns:
+Walsong TradeMaster follows **Clean Architecture** principles with clear separation of concerns:
 
 ```
 ┌─────────────────────────────────────┐
@@ -299,7 +299,7 @@ This software is licensed under a proprietary license. See [LICENSE](./LICENSE) 
 
 **Walsong TradeMaster® - Transforming Retail, One Transaction at a Time**
 
-⭐ If you're using TradeMaster in your business, we'd love to hear from you!
+⭐ If you're using Walsong TradeMaster in your business, we'd love to hear from you!
 
 ---
 
