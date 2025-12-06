@@ -9,6 +9,10 @@ body {
   background: #0f0f0f;
   color: white;
 }
+.logo {
+  width: 140px;
+  margin-bottom: 25px;
+}
 
 /* HERO */
 .hero {
