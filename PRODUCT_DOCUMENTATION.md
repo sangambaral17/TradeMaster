@@ -298,7 +298,7 @@ TradeMaster is built using cutting-edge Microsoft technologies:
 
 - **User Manual**: Comprehensive PDF guide included
 - **Video Tutorials**: Step-by-step video walkthroughs
-- **Email Support**: support@trademaster.com (example)
+- **Email Support**: support@walsongcontents.com (example)
 - **On-Site Training**: Available for enterprise customers
 
 ---
@@ -456,18 +456,18 @@ Sangam Baral is the sole creator and owner of TradeMaster®. With extensive expe
 ## Contact & Support
 
 ### Sales Inquiries
-- **Email**: sales@trademaster.com (example)
+- **Email**: sales@walsongcontents.com (example)
 - **Phone**: +1-XXX-XXX-XXXX (update with real number)
-- **Website**: www.trademaster.com (example)
+- **Website**: www.walsongcontents.com (example)
 
 ### Technical Support
-- **Email**: support@trademaster.com (example)
-- **Support Portal**: support.trademaster.com (example)
+- **Email**: support@walsongcontents.com (example)
+- **Support Portal**: support.walsongcontents.com (example)
 - **Response Time**: 24-48 hours (Business License), 4-8 hours (Enterprise)
 
 ### Legal & Licensing
-- **Email**: legal@trademaster.com (example)
-- **Patent Inquiries**: patents@trademaster.com (example)
+- **Email**: legal@walsongcontents.com (example)
+- **Patent Inquiries**: patents@walsongcontents.com (example)
 
 ---
 

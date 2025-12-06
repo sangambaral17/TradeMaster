@@ -55,7 +55,7 @@ For detailed instructions, see [QUICK_START_GUIDE.md](./QUICK_START_GUIDE.md)
 - **[Quick Start Guide](./QUICK_START_GUIDE.md)** - Get up and running in 15 minutes
 - **[Executive Summary](./EXECUTIVE_SUMMARY.md)** - For stakeholders and investors
 - **[Project Report](./PROJECT_REPORT.md)** - Development status and roadmap
-- **[License Agreement](./LICENSE.txt)** - Terms and conditions
+- **[License Agreement](./LICENSE)** - Terms and conditions
 
 ---
 
@@ -122,7 +122,7 @@ TradeMaster/
 ├── 📄 PRODUCT_DOCUMENTATION.md       # Complete product docs
 ├── 📄 EXECUTIVE_SUMMARY.md           # Business overview
 ├── 📄 QUICK_START_GUIDE.md           # User guide
-├── 📄 LICENSE.txt                    # Software license
+├── 📄 LICENSE                        # Software license
 └── 📄 README.md                      # This file
 ```
 
@@ -213,7 +213,7 @@ For detailed implementation details, see [PHASE_COMPLETION_DOCS.md](./PHASE_COMP
 
 This is a proprietary project. Contributions are not accepted at this time.
 
-For feature requests or bug reports, please contact: feedback@trademaster.com
+For feature requests or bug reports, please contact: feedback@walsongcontents.com
 
 ---
 
@@ -223,7 +223,7 @@ For feature requests or bug reports, please contact: feedback@trademaster.com
 
 Copyright © 2025 Sangam Baral. All Rights Reserved.
 
-This software is licensed under a proprietary license. See [LICENSE.txt](./LICENSE.txt) for full terms and conditions.
+This software is licensed under a proprietary license. See [LICENSE](./LICENSE) for full terms and conditions.
 
 - ✅ Commercial use permitted (with valid license)
 - ❌ Redistribution prohibited
@@ -250,14 +250,14 @@ This software is licensed under a proprietary license. See [LICENSE.txt](./LICEN
 ## 📞 Support
 
 ### For Customers
-- **Email**: support@trademaster.com
+- **Email**: support@walsongcontents.com
 - **Response Time**: 24-48 hours (Business hours)
-- **Knowledge Base**: help.trademaster.com
+- **Knowledge Base**: help.walsongcontents.com
 
 ### For Business Inquiries
-- **Sales**: sales@trademaster.com
-- **Partnerships**: partnerships@trademaster.com
-- **Press**: press@trademaster.com
+- **Sales**: sales@walsongcontents.com
+- **Partnerships**: partnerships@walsongcontents.com
+- **Press**: press@walsongcontents.com
 
 ---
 

@@ -17,7 +17,7 @@ Thank you for choosing TradeMaster®, your complete inventory and sales manageme
 - **TradeMaster Desktop Application** - The main program
 - **User Guide (PDF)** - Complete reference manual
 - **Sample Data** - Pre-loaded products to explore
-- **Email Support** - help@trademaster.com
+- **Email Support** - help@walsongcontents.com
 
 ---
 
@@ -186,7 +186,7 @@ When you open TradeMaster, you see the **Dashboard**:
 1. Restart your computer
 2. Reinstall TradeMaster
 3. Check Windows Event Viewer for errors
-4. Contact support: support@trademaster.com
+4. Contact support: support@walsongcontents.com
 
 ### Transaction didn't save
 **Solution**: Check Sales Reports to verify. If missing, repeat the sale.
@@ -200,7 +200,7 @@ When you open TradeMaster, you see the **Dashboard**:
 - Making Your First Sale (3 min)
 - Generating Reports (7 min)
 
-*Visit: www.trademaster.com/tutorials* *(example link)*
+*Visit: www.walsongcontents.com/tutorials* *(example link)*
 
 ### User Manual
 Complete PDF guide included with installation:
@@ -218,13 +218,13 @@ Complete PDF guide included with installation:
 
 ### Support Channels
 
-**Email Support**: support@trademaster.com  
+**Email Support**: support@walsongcontents.com  
 Response time: 24-48 hours
 
 **Phone Support** (Business/Enterprise license): +XXX-XXX-XXXX  
 Hours: Monday-Friday, 9 AM - 5 PM EST
 
-**Knowledge Base**: help.trademaster.com *(example link)*  
+**Knowledge Base**: help.walsongcontents.com *(example link)*  
 Searchable articles and FAQs
 
 ### Before Contacting Support
@@ -277,9 +277,9 @@ Full license agreement: [LICENSE.txt](./LICENSE.txt)
 
 We'd love to hear from you!
 
-**Feature Requests**: features@trademaster.com  
-**Bug Reports**: bugs@trademaster.com  
-**General Feedback**: feedback@trademaster.com
+**Feature Requests**: features@walsongcontents.com  
+**Bug Reports**: bugs@walsongcontents.com  
+**General Feedback**: feedback@walsongcontents.com
 
 Your input helps us make TradeMaster better for everyone!
 
